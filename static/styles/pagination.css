@@ -1,0 +1,44 @@
+.page-link {
+  border: none;
+  padding: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+
+  border-radius: 100%;
+
+  text-align: center;
+  line-height: 1.5rem;
+
+  color: #001;
+  font-size: 14px;
+
+  margin: 0 0.3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.page-link > span {
+  font-size: 15px;
+}
+
+.page-item:last-child .page-link,
+.page-item:first-child .page-link {
+  border-radius: 100%;
+  margin: 0 2.5rem;
+  width: 5rem;
+}
+
+.page-item:last-child .page-link:hover,
+.page-item:first-child .page-link:hover,
+.page-link:hover {
+  background-color: transparent;
+  color: #999;
+}
+
+.page-link.page-active {
+  background-color: #001;
+  color: #fff;
+}

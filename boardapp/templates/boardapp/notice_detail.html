@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% load bootstrap4 %}
+
+<!--  -->
+
+{% block content %}
+<div class="container board_detail">
+  <div class="board_detail__title">
+    <h2>{{target_notice.title}}</h2>
+  </div>
+
+  <div class="board_detail__hit">
+    <p>조회수 : {{target_notice.hit}}</p>
+  </div>
+
+  <div class="board_detail__info">
+    <p>{{target_notice.author}}</p>
+    <p>{{target_notice.created}}</p>
+  </div>
+
+  <div class="board_detail__content">
+    <p>{{target_notice.content | safe}}</p>
+  </div>
+
+  <div class="board_detail__buttonArea">
+    <a class="btn btn-primary btn-sm" href="javascript:history.back();"
+      >돌아가기</a
+    >
+  </div>
+</div>
+
+{% endblock content %}

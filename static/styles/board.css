@@ -1,0 +1,44 @@
+.board_datum a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.board_datum a:hover {
+  font-weight: 700;
+}
+
+.board_detail {
+  margin-top: 5rem;
+}
+
+.board_detail__title {
+  border-bottom: 1.5px solid #ccc;
+}
+
+.board_detail__info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.board_detail__content {
+  border-radius: 1rem;
+  box-shadow: 2px 2px 20px rgb(229, 229, 229);
+  padding: 2rem;
+  margin-bottom: 5rem;
+}
+
+.board_detail__buttonArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

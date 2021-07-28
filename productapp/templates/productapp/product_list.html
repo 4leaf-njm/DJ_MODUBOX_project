@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% load bootstrap4 %}
+<!--  -->
+
+{% block content %}
+
+<section class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">One of three columns</div>
+    <div class="col-12 col-lg-6">One of three columns</div>
+  </div>
+
+  <h1>Product</h1>
+
+  {% for product in product_list %}
+  <h4>{{product.title}}</h4>
+  {% for image in product.images.all %}
+  <img width="250px" src="{{image.image_url.url}}" alt="{{image.title}}" />
+  <h5>{{image.title}}</h5>
+  {% endfor %}
+  <!--  -->
+  <hr />
+  {% endfor %}
+  <!--  -->
+</section>
+
+{% endblock content %}

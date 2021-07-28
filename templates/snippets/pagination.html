@@ -1,0 +1,62 @@
+<div class="paginationBox">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{page_obj.number|add:-1}}">
+          <span class="material-icons">arrow_back </span>
+          Prev
+        </a>
+      </li>
+
+      {% else %}
+
+      <li class="page-item disabled">
+        <a class="page-link" href="?page={{page_obj.number|add:-1}}">
+          <span class="material-icons">arrow_back </span>
+          Prev
+        </a>
+      </li>
+
+      {% endif %}
+      <!--  -->
+
+      {% for page in page_obj.paginator.page_range %}
+      <!--  -->
+      {% if page_obj.number == page %}
+      <li class="page-item">
+        <a class="page-link page-active" href="?page={{page}}">{{page}}</a>
+      </li>
+      <!--  -->
+
+      {% else %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{page}}">{{page}}</a>
+      </li>
+
+      {% endif %}
+      <!--  -->
+
+      {% endfor%}
+      <!--  -->
+
+      {% if page_obj.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{page_obj.number|add:+1}}"
+          >Next
+          <span class="material-icons">arrow_forward </span>
+        </a>
+      </li>
+
+      {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="?page={{page_obj.number|add:+1}}"
+          >Next
+          <span class="material-icons">arrow_forward </span>
+        </a>
+      </li>
+
+      {% endif %}
+    </ul>
+  </nav>
+</div>

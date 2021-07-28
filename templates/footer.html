@@ -1,0 +1,19 @@
+<footer>
+  <a class="header_logo" href="{% url 'core:home' %}">
+    {% for logo in logo_list %}
+    <!--  -->
+    {% if logo.title == "Footer LOGO - [PC VERSION]" %}
+    <img width="120px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+    {% endif %}
+    <!--  -->
+
+    {% endfor %}
+  </a>
+
+  {% for footer in footer_list %}
+  <div>
+    <span>{{footer.title}} : </span>
+    <span>{{footer.content}}</span>
+  </div>
+  {% endfor %}
+</footer>

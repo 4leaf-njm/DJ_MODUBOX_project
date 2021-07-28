@@ -1,0 +1,41 @@
+{% load static %}
+
+<header class="main_header">
+  <a class="header_logo" href="{% url 'core:home' %}">
+    {% for logo in logo_list %}
+    <!--  -->
+    {% if logo.title == "Main LOGO - [PC VERSION]" %}
+    <img width="120px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+    {% endif %}
+    <!--  -->
+
+    {% endfor %}
+  </a>
+
+  <ul class="menu_nav" id="menu_nav"></ul>
+
+  <div class="menu_nav_right">
+    <a href="#">LOGIN</a>
+    <a href="#">SIGN UP</a>
+    <a href="{% url 'questionapp:order' %}">상담 / 주문제작</a>
+  </div>
+</header>
+
+<header class="main_header_mobile">
+  <a class="header_logo_mobile" href="{% url 'core:home' %}">MOLOGO</a>
+
+  <span class="material-icons" onclick="javascript:toggleMobileHeader(true)"
+    >menu</span
+  >
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobile_menuBox" class="mobile_menuBox">
+  <div class="mobile_menuBox__top">
+    <span class="material-icons" onclick="javascript:toggleMobileHeader(false)"
+      >close</span
+    >
+  </div>
+</div>
+
+<script src="{% static 'js/makeHeader.js' %}"></script>

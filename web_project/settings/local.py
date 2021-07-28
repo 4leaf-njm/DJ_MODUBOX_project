@@ -1,0 +1,34 @@
+from .base import *
+
+env = environ.Env(DEBUG=(bool, False))
+
+environ.Env.read_env(env_file=(os.path.join(BASE_DIR, ".env")))
+
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = env("SECRET_KEY")
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ["*"]
+
+
+# Database
+# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "modubox_dev_env",
+        "USER": "dev_env",
+        "PASSWORD": "fourleaf0309!!",
+        "HOST": "15.165.74.110",
+        "PORT": "3306",
+        "OPTIONS": {
+            "charset": "utf8mb4",
+        },
+    }
+}

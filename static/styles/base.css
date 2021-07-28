@@ -1,0 +1,59 @@
+@import "./theme.css";
+@import "./pagination.css";
+@import "./home.css";
+@import "./board.css";
+@import "./header.css";
+@import "./faq.css";
+
+.table-sm {
+  font-size: 0.7rem;
+}
+
+.table-sm tbody tr {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "NEXON Lv1 Gothic OTF";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "NEXON Lv1 Gothic OTF", cursive;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.orderCreate .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.orderCreate .form-text {
+  display: none;
+}
+
+.orderCreate .form-group > label:nth-child(1) {
+  width: 20rem;
+  color: #999;
+}
+.orderCreate .form-group > input,
+.orderCreate .form-group > select,
+.orderCreate .form-group > textarea {
+  width: 40rem;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 11.5px;
+  }
+}
