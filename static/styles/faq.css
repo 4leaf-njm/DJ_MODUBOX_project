@@ -21,13 +21,13 @@
 }
 
 .faq_type_select_area form .faq_type_button:hover {
-  border: #005aa7 1px solid;
-  color: #005aa7;
+  border: 1px solid var(--theme);
+  color: var(--theme);
   background-color: #fff;
 }
 
 .faq_type_select_area form .faq_type_button.active {
-  background: linear-gradient(#005aa7, #fffde4);
+  background: linear-gradient(#FBAC25, #fffde4);
   color: #fff;
   border: none;
 }
