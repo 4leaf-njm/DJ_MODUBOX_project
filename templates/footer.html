@@ -1,19 +1,45 @@
 <footer>
-  <a class="header_logo" href="{% url 'core:home' %}">
-    {% for logo in logo_list %}
-    <!--  -->
-    {% if logo.title == "Footer LOGO - [PC VERSION]" %}
-    <img width="120px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
-    {% endif %}
-    <!--  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 footer_info">
+        <h4>COMPANY INFO</h4>
 
-    {% endfor %}
-  </a>
+        {% for footer in footer_list %}
+        <div class="footer_info_text">
+          <span>{{footer.title}} : </span>
+          <span>{{footer.content}}</span>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="col-xs-12 col-sm-4 footer_info">
+        <h4>BANK INFO</h4>
 
-  {% for footer in footer_list %}
-  <div>
-    <span>{{footer.title}} : </span>
-    <span>{{footer.content}}</span>
+        <img
+          width="200px"
+          src="https://blog.kakaocdn.net/dn/qAwyo/btqyWLbmOAD/9eqyPAko6fuK9ycDeAcYrk/img.jpg"
+          alt="bank_logo"
+        />
+        <div>1002-982-010204</div>
+        <div>예금주 : 이윤하(모두박스)</div>
+      </div>
+      <div class="col-xs-12 col-sm-4 footer_info">
+        <a class="header_logo" href="{% url 'core:home' %}">
+          {% for logo in logo_list %}
+          <!--  -->
+          {% if logo.title == "Footer LOGO - [PC VERSION]" %}
+          <img
+            width="120px"
+            src="{{logo.logo_file.url}}"
+            alt="{{logo.title}}"
+          />
+          {% endif %}
+          <!--  -->
+
+          {% endfor %}
+        </a>
+      </div>
+    </div>
   </div>
-  {% endfor %}
 </footer>
+
+<div></div>

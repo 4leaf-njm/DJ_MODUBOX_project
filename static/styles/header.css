@@ -12,8 +12,11 @@
 }
 
 .main_header a {
-  text-decoration: none;
+  color : #fff;
+
 }
+
+
 
 .main_header .menu_nav {
   height: 100%;
@@ -25,6 +28,7 @@
 
   margin: 0 1rem;
 }
+
 
 .main_header .menu_nav li {
   list-style: none;

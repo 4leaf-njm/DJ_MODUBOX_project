@@ -16,6 +16,7 @@ class FooterInfo(TimeStamped):
     content = models.CharField(
         "내용", max_length=350, null=False, help_text="푸터에 보일 정보 중 내용 입니다."
     )
+    sort = models.IntegerField("정렬순서", default=1)
 
     def __str__(self):
         return self.title

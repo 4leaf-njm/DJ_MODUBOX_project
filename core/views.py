@@ -25,7 +25,7 @@ class CustomTemplateView(TemplateView):
         logo_list = LogoInfo.objects.all()
         context["logo_list"] = logo_list
 
-        footer_info = FooterInfo.objects.all()
+        footer_info = FooterInfo.objects.all().order_by("sort")
         context["footer_list"] = footer_info
         return context
 

@@ -1,72 +1,97 @@
-
 .design_box {
-    width : 100%;
-    height: 42rem;
+  width: 100%;
+  height: 42rem;
 
-    border-radius: 1.5rem;
-    border: 4.5px solid var(--theme);
+  border-radius: 1.5rem;
+  border: 4.5px solid var(--theme);
 }
 
-
-.design_box div{
-    width: 100%;
+.design_box div {
+  width: 100%;
 }
 
 .design_box .design_box_1,
 .design_box .design_box_4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .design_box .design_box_1 {
-    height:5rem;
-    
+  height: 5rem;
+  font-size : 1.6rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.design_box .design_box_1 span {
+    font-weight: 700;
+    color : var(--theme);
 }
 
 .design_box .design_box_2 {
-    height: 18rem;
-
-    display: flex;
-    flex-direction: row;
-  
+  height: 18rem;
+  margin : 0.7rem;
+  display: flex;
+  flex-direction: row;
 }
 
+.design_box .design_box_2 .design_box_2_right div {
+    width : 100%;
+    font-size : 0.9rem;
+}
 
+.design_box .design_box_2 .design_box_2_right_strong{
+    display: flex;
+    flex-direction: row;
+}
+
+.design_box .design_box_2 .design_box_2_right .design_box_2_right_strong > span {
+    font-weight: 700;
+    color : var(--theme);
+    display: inline;
+    font-size: 1rem;
+}
 
 .design_box .design_box_3 {
-    height: 12rem;
+  height: 12rem;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-
 
 .design_box .design_box_2 div {
-    width: 50%;
-    height: 100%;
+  width: 50%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .design_box .design_box_3 div {
-    width: 30%;
-    height: 100%;
+  width: 30%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: grey;
+  background-color: grey;
 }
 
 .design_box .design_box_4 {
-    height:5rem;
+  height: 5rem;
+}
+
+.design_desc {
+  margin: 6rem 0;
+}
+
+.design_desc div span {
+    font-weight: 700;
+    color : var(--theme);
 }
