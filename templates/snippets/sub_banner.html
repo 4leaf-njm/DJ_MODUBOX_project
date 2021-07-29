@@ -1,0 +1,33 @@
+<section class="sub_banner">
+  <img src="{{img_source}}" alt="subBanner" />
+
+  <div class="sub_banner_tab">
+    <ul id="sub_banner_tab_list">
+    
+    </ul>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+    const current_menu = "{{menu}}";
+
+    const tab_ul = document.getElementById("sub_banner_tab_list");
+
+    menu_list.map(menu => {
+
+        if(menu.name ===  current_menu) {
+            menu.sub_menu.map(in_menu => {
+
+                const li_tag = document.createElement("li");
+                const a_tag = document.createElement("a");
+
+                a_tag.innerText = in_menu.name
+                a_tag.href = in_menu.link
+
+                li_tag.appendChild(a_tag);
+                tab_ul.appendChild(li_tag);
+            })
+        }
+    })
+ </script>

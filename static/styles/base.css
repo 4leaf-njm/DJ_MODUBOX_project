@@ -4,6 +4,8 @@
 @import "./board.css";
 @import "./header.css";
 @import "./faq.css";
+@import "./sub_banner.css";
+@import "./design.css";
 
 .table-sm {
   font-size: 0.7rem;
@@ -50,6 +52,15 @@ button {
 .orderCreate .form-group > select,
 .orderCreate .form-group > textarea {
   width: 40rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media screen and (max-width: 500px) {

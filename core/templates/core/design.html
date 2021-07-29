@@ -2,7 +2,26 @@
 <!--  -->
 
 {% block content %}
+<!--  -->
+{% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="제작안내" %}
 
-<h1>Design</h1>
+<section class="container text-center mt-5" >
+    <div class="mb-5">1</div>
+    <div class="design_box mb-5">
+        <div class="mb-2 design_box_1">머라구 머라구 테스트 텍스트</div>
+        <div class="design_box_2">
+            <div>IMAGE</div>
+            <div>TEXT</div>
+        </div>
+        <div class="mb-2 design_box_3">
+            <div>IMAGE</div>
+            <div>IMAGE</div>
+            <div>IMAGE</div>
+        </div>
+        <div class="mb-2 design_box_4">머라구 머라구 테스트 텍스트</div>
+    </div>
+    <div class="design_box mb-5">3</div>
+</section>
+
 
 {% endblock content %}

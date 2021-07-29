@@ -1,4 +1,4 @@
-menu_list = [
+const menu_list = [
   {
     name: "제품소개",
     sub_menu: [
@@ -63,3 +63,8 @@ const toggleMobileHeader = (flag) => {
     }, 300);
   }
 };
+
+
+
+
+
