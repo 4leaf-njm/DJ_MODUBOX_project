@@ -21,6 +21,22 @@
     font-size: 1.4rem;
     margin-top: 6.3rem;
     border-bottom: 0.3rem solid var(--theme);
+    position: relative;
+}
+
+.order_title_1:before {
+    content: "";
+    position: absolute;
+    bottom: -0.6rem;
+    left: 0;
+    width: 100%;
+    height: 0.15rem;
+    background-color: var(--theme);
+}
+
+.order_list:nth-child(3), .order_list:nth-child(4) {
+   width: 50%;
+  flex-direction: row;
 }
 
 .orderCreate .form-group {
@@ -29,5 +45,14 @@
 }
 
 .orderCreate .form-group > label:nth-child(1) {
-    
+    width: 10rem;
 }
+
+.orderCreate .form-group > input {
+    font-size: 0.9rem;
+}
+
+/* .orderCreate .form-group:nth-child(3), .orderCreate .form-group:nth-child(4) {
+    width: 50%;
+    
+} */
