@@ -10,14 +10,17 @@ class FooterInfoAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "content",
+        "sort",
         "updated",
     )
     list_display_links = ("title",)
     fields = (
         "title",
         "content",
+        "sort",
         "updated",
     )
+    ordering = ["sort",]
 
     readonly_fields = ("updated",)
 
