@@ -23,9 +23,14 @@
   <!--  -->
   {% for faq in faq_list %}
   <div class="faq_box">
-    <h5>{{faq.title}}</h5>
-
-    <div>{{faq.content | safe}}</div>
+    <h5>
+      <div class="faq_box_1">Q</div>
+      <div>{{faq.title}}</div>
+    </h5>
+    <div class="faq_box_answer">
+      <div class="faq_box_2">A</div>
+      <div>{{faq.content | safe}}</div>
+    </div>
   </div>
 
   {% endfor %}
