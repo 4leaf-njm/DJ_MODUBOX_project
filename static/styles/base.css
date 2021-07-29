@@ -49,7 +49,6 @@ button {
 
 .orderCreate .form-group > label:nth-child(1) {
   width: 20rem;
-  color: #999;
 }
 .orderCreate .form-group > input,
 .orderCreate .form-group > select,

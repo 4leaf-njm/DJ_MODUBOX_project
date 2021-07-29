@@ -5,7 +5,15 @@
 <!--  -->
 {% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="고객지원" %}
 
+
 <div class="container orderCreate">
+  <div class="order mt-5">
+    <div class="order_title">상담/견적의뢰</div>
+    <div class="order_desc"><span>모두박스</span>의 궁금한 모든 것을 신속하고 정확한 상담을 통해 확인해보세요.</div>
+  </div>
+  <div class="order_title_1">
+    고객정보
+  </div>
   <form action="{% url 'questionapp:order' %}" method="POST">
     {% csrf_token %}
     <!--  -->
@@ -14,5 +22,6 @@
     <input type="submit" value="견적 문의" />
   </form>
 </div>
+
 
 {% endblock content %}
