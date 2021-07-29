@@ -1,25 +1,32 @@
 .processing {
-    width: 100%;
-    margin: 6.3rem 0;
+  width: 100%;
+  margin: 6.3rem 0;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .processing .processing_text {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .processing .processing_text span {
-    color: var(--theme)
+  color: var(--theme);
 }
 
 .processing .processing_img {
-    margin-top: 4rem;
+  margin-top: 4rem;
 }
 
 .processing .processing_img img {
-width: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .processing .processing_text {
+    padding: 1rem 4rem;
+    font-size: 1.1rem;
+  }
 }
