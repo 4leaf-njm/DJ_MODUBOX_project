@@ -5,23 +5,273 @@
 <!--  -->
 {% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="고객지원" %}
 
-
 <div class="container orderCreate">
   <div class="order mt-5">
     <div class="order_title">상담/견적의뢰</div>
-    <div class="order_desc"><span>모두박스</span>의 궁금한 모든 것을 신속하고 정확한 상담을 통해 확인해보세요.</div>
+    <div class="order_desc">
+      <span>모두박스</span>의 궁금한 모든 것을 신속하고 정확한 상담을 통해
+      확인해보세요.
+    </div>
   </div>
-  <div class="order_title_1">
-    고객정보
-  </div>
+  <div class="order_title_1">고객정보</div>
   <form action="{% url 'questionapp:order' %}" method="POST">
     {% csrf_token %}
     <!--  -->
-    {% bootstrap_form form %}
+
+    <div class="form-group">
+      <label for="id_title">제작의뢰명</label
+      ><input
+        type="text"
+        name="title"
+        maxlength="200"
+        class="form-control"
+        placeholder="제작의뢰명"
+        title=""
+        required
+        id="id_title"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_company">상 호</label
+      ><input
+        type="text"
+        name="company"
+        maxlength="100"
+        class="form-control"
+        placeholder="상 호"
+        title=""
+        required
+        id="id_company"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_name">성 명</label
+      ><input
+        type="text"
+        name="name"
+        maxlength="20"
+        class="form-control"
+        placeholder="성 명"
+        title=""
+        required
+        id="id_name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_password">비밀번호</label
+      ><input
+        type="password"
+        name="password"
+        maxlength="4"
+        class="form-control"
+        placeholder="비밀번호"
+        title="비밀번호는 의뢰 삭제 시 필요합니다."
+        required
+        id="id_password"
+      />
+      <small class="form-text text-muted"
+        >비밀번호는 의뢰 삭제 시 필요합니다.</small
+      >
+    </div>
+    <div class="form-group">
+      <label for="id_tel">연락처</label
+      ><input
+        type="text"
+        name="tel"
+        maxlength="20"
+        class="form-control"
+        placeholder="연락처"
+        title=""
+        required
+        id="id_tel"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_email">이메일</label
+      ><input
+        type="email"
+        name="email"
+        maxlength="254"
+        class="form-control"
+        placeholder="이메일"
+        title=""
+        required
+        id="id_email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_pro_type">제작물</label
+      >
+        <input type="radio" name="pro_type" value="패키지">
+        <input type="radio" name="pro_type" value="쇼핑백">
+        <input type="radio" name="pro_type" value="형택">
+        <input type="radio" name="pro_type" value="기타제작물">
+      
+      
+    </div>
+    <div class="form-group">
+      <label for="id_pro_qny">제작수량</label
+      ><input
+        type="number"
+        name="pro_qny"
+        class="form-control"
+        placeholder="제작수량"
+        title=""
+        required
+        id="id_pro_qny"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_size_width">사이즈 가로(mm)</label
+      ><input
+        type="number"
+        name="size_width"
+        class="form-control"
+        placeholder="사이즈 가로(mm)"
+        title=""
+        required
+        id="id_size_width"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_size_length">사이즈 세로(mm)</label
+      ><input
+        type="number"
+        name="size_length"
+        class="form-control"
+        placeholder="사이즈 세로(mm)"
+        title=""
+        required
+        id="id_size_length"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_size_height">사이즈 높이(mm)</label
+      ><input
+        type="number"
+        name="size_height"
+        class="form-control"
+        placeholder="사이즈 높이(mm)"
+        title=""
+        required
+        id="id_size_height"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_design_yn">디자인 유/무</label
+      ><select name="design_yn" class="form-control" title="" id="id_design_yn">
+        <option value="없음" selected>없음</option>
+
+        <option value="의뢰">의뢰</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="id_paper_type">종이재질</label
+      ><select
+        name="paper_type"
+        class="form-control"
+        title=""
+        id="id_paper_type"
+      >
+        <option value="아트지" selected>아트지</option>
+
+        <option value="스노우화이트">스노우화이트</option>
+
+        <option value="SC마니라">SC마니라</option>
+
+        <option value="로얄아이보리">로얄아이보리</option>
+
+        <option value="기타재질">기타재질</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="id_print_spec">인쇄사양</label
+      ><select
+        name="print_spec"
+        class="form-control"
+        title=""
+        id="id_print_spec"
+      >
+        <option value="없음" selected>없음</option>
+
+        <option value="4도 컬러인쇄">4도 컬러인쇄</option>
+
+        <option value="1도 단색인쇄">1도 단색인쇄</option>
+
+        <option value="별색인쇄">별색인쇄</option>
+
+        <option value="UV인쇄">UV인쇄</option>
+
+        <option value="기타인쇄">기타인쇄</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="id_coating">코 팅</label
+      ><select name="coating" class="form-control" title="" id="id_coating">
+        <option value="없음" selected>없음</option>
+
+        <option value="무광라미네이팅">무광라미네이팅</option>
+
+        <option value="유광라미네이팅">유광라미네이팅</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="id_processing">후가공</label
+      ><input
+        type="text"
+        name="processing"
+        maxlength="50"
+        class="form-control"
+        placeholder="후가공"
+        title=""
+        required
+        id="id_processing"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_content">문의내용</label
+      ><textarea
+        name="content"
+        cols="40"
+        rows="10"
+        class="form-control"
+        placeholder="문의내용"
+        title=""
+        required
+        id="id_content"
+      >
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label for="id_file_1">첨부파일1</label><br /><input
+        type="file"
+        name="file_1"
+        class="form-control-file"
+        title=""
+        id="id_file_1"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_file_2">첨부파일2</label><br /><input
+        type="file"
+        name="file_2"
+        class="form-control-file"
+        title=""
+        id="id_file_2"
+      />
+    </div>
+    <div class="form-group">
+      <label for="id_file_3">첨부파일3</label><br /><input
+        type="file"
+        name="file_3"
+        class="form-control-file"
+        title=""
+        id="id_file_3"
+      />
+    </div>
 
     <input type="submit" value="견적 문의" />
   </form>
 </div>
-
 
 {% endblock content %}

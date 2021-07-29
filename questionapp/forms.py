@@ -1,10 +1,12 @@
 from django.forms import ModelForm
+from django import forms
 from questionapp.models import OrderBoard
 
 
 class OrderCreationForm(ModelForm):
     class Meta:
         model = OrderBoard
+        pro_type = forms.CheckboxInput()
         fields = (
             "title",
             "company",
