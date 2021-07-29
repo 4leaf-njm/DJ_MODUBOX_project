@@ -69,6 +69,14 @@ a:hover {
 
 @media screen and (max-width: 500px) {
   html {
-    font-size: 11.5px;
+    font-size: 12px;
+  }
+
+  .design_desc {
+    font-size : 0.8rem;
+  }
+
+  .design_box_1 {
+    font-size :0.8rem;
   }
 }
