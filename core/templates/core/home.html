@@ -9,10 +9,12 @@
 
 <div class="container">
   <section class="home_section1">
-    <img
-      width="660px"
-      src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2FAdobeStock_226081131.png?alt=media&token=499abef5-78ba-4860-9e1a-9b93adf79174"
-    />
+    <div class="section1_imgBox">
+      <img
+        width="100%"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2FAdobeStock_226081131.png?alt=media&token=499abef5-78ba-4860-9e1a-9b93adf79174"
+      />
+    </div>
 
     <div class="section1_txtBox1">
       <span>ABOUT</span>
@@ -36,10 +38,14 @@
 
   <section class="home_section2">
     <div class="section2_Box">
-      <img
-        width="100%"
-        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F4866247.png?alt=media&token=43750bca-98f4-482d-a46b-cf6bd9fcadf0"
-      />
+      <a href="{% url 'product:list' type=1 %}">
+        <div class="section2_Box_Img">
+          <img
+            width="100%"
+            src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F4866247.png?alt=media&token=43750bca-98f4-482d-a46b-cf6bd9fcadf0"
+          />
+        </div>
+      </a>
 
       <span class="section2_title">맞춤 박스</span>
       <div class="section2_bar"></div>
@@ -48,10 +54,15 @@
     </div>
 
     <div class="section2_Box">
-      <img
-        width="100%"
-        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=b1789c7a-d38f-41ac-a0dd-b14a076303cf"
-      />
+      <a href="{% url 'product:list' type=2 %}">
+        <div class="section2_Box_Img">
+          <img
+            width="100%"
+            src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=b1789c7a-d38f-41ac-a0dd-b14a076303cf"
+          />
+        </div>
+      </a>
+
       <span class="section2_title">쇼핑백</span>
       <div class="section2_bar"></div>
       <span>원하는 크기와 재질,</span>
@@ -60,10 +71,15 @@
     </div>
 
     <div class="section2_Box">
-      <img
-        width="100%"
-        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=1ca4c9c8-2829-436c-bff6-796e2f88f16e"
-      />
+      <a href="{% url 'product:list' type=3 %}">
+        <div class="section2_Box_Img">
+          <img
+            width="100%"
+            src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=1ca4c9c8-2829-436c-bff6-796e2f88f16e"
+          />
+        </div>
+      </a>
+
       <span class="section2_title">행택</span>
       <div class="section2_bar"></div>
       <span>원하는 행택의 종류와</span>
@@ -86,7 +102,9 @@
         주문부터 제작, 납품까지의 과정을 안내해드립니다.
       </span>
 
-      <button class="section3_btn">바로가기 &rarr;</button>
+      <a href="{% url 'core:processing' %}">
+        <button class="section3_btn">바로가기 &rarr;</button>
+      </a>
     </div>
   </div>
 </section>
@@ -131,7 +149,11 @@
     </div>
 
     <div class="section4_Box2">
-      <img width="100%" alt="지도" />
+      <img
+        width="100%"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%8C%E1%85%B5%E1%84%83%E1%85%A9.png?alt=media&token=92123d08-c70b-4462-bcf4-d3495b708ee5"
+        alt="지도"
+      />
     </div>
   </section>
 </div>
