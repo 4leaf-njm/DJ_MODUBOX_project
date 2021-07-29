@@ -13,9 +13,9 @@
   margin: 0 2rem 0.5rem 0;
 
   border-radius: 0.5rem;
-  background-color: #ccc;
-  color: #fff;
-  box-shadow: 1px 1px 4px #ccc;
+  background-color: var(--gray);
+  color: var(--white);
+  box-shadow: 1px 1px 4px var(--gray);
 
   transition: 0.4s;
 }
@@ -23,12 +23,12 @@
 .faq_type_select_area form .faq_type_button:hover {
   border: 1px solid var(--theme);
   color: var(--theme);
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .faq_type_select_area form .faq_type_button.active {
   background: linear-gradient(#FBAC25, #fffde4);
-  color: #fff;
+  color: var(--white);
   border: none;
 }
 
@@ -60,7 +60,6 @@
   border-radius: 2rem;
   background-color: var(--theme);
   color: var(--white);
-  
 }
 
 .faq_box h5:hover {
@@ -69,14 +68,20 @@
   color: var(--white);
 }
 
-.faq_box > div {
+/* .faq_box > div {
   display: none;
-}
+} */
 
 .faq_box .faq_box_answer {
   padding: 2.5rem 2rem;
   border-radius: 2rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  font-size: 1.2rem;
 
+  display: flex;
+  flex-direction: row;
 }
 
+.faq_box .faq_box_answer .faq_box_2 {
+  margin-right: 2rem;
+}
