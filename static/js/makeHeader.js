@@ -5,7 +5,6 @@ const menu_list = [
       { name: "맞춤박스", link: "/product/intro/1" },
       { name: "쇼핑백 ", link: "/product/intro/2" },
       { name: "행택 ", link: "/product/intro/3" },
-      { name: "겔러리 ", link: "#" },
     ],
   },
   {
@@ -27,7 +26,7 @@ const menu_list = [
 
 const menu_nav = document.getElementById("menu_nav");
 
-menu_list.map((menu) => {
+menu_list.map((menu ,idx) => {
   const li_tag = document.createElement("li");
   li_tag.className = "";
   li_tag.innerText = menu.name;
@@ -47,7 +46,26 @@ menu_list.map((menu) => {
   li_tag.appendChild(div_tag);
 
   menu_nav.appendChild(li_tag);
+
+
+  if(idx === menu_list.length - 1) {
+    const li_tag = document.createElement("li");
+    const a_tag = document.createElement("a");
+    a_tag.className = "subMenuBox__menu";
+    a_tag.href = "#";
+    a_tag.innerText = "겔러리";
+
+    li_tag.appendChild(a_tag);
+    menu_nav.appendChild(li_tag);
+  }
 });
+
+
+
+
+
+
+
 
 // Action Controller
 const toggleMobileHeader = (flag) => {
