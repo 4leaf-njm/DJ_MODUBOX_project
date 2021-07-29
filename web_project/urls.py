@@ -28,6 +28,7 @@ urlpatterns = [
     path("board/", include("boardapp.urls")),
     path("question/", include("questionapp.urls")),
     path("product/", include("productapp.urls")),
+    path("user/", include("userapp.urls")),
 ]
 
 if settings.DEBUG:

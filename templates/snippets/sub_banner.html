@@ -1,11 +1,20 @@
 <section class="sub_banner">
   <img src="{{img_source}}" alt="subBanner" />
 
+
+  
+  {% if menu %}
+    
   <div class="sub_banner_tab">
     <ul id="sub_banner_tab_list">
     
     </ul>
   </div>
+
+  {% else %}
+  <div></div>
+  {% endif %}
+  
 </section>
 
 

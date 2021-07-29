@@ -2,6 +2,9 @@
 
 <header class="main_header">
   <a class="header_logo" href="{% url 'core:home' %}">
+
+    
+    {% if logo_list %}
     {% for logo in logo_list %}
     <!--  -->
     {% if logo.title == "Main LOGO - [PC VERSION]" %}
@@ -10,16 +13,32 @@
     <!--  -->
 
     {% endfor %}
-  </a>
 
-  <ul class="menu_nav" id="menu_nav">
-  </ul>
+    {% else %}
+    <img width="120px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2Fmodu_logo_w.png?alt=media&token=e22b6cb1-4e52-4710-ba61-6fd6813b5a7e" alt="logo" />
+    {% endif %}
+      
 
   
+  </a>
+
+
+  <ul class="menu_nav" id="menu_nav"></ul>
 
   <div class="menu_nav_right">
-    <a href="#">LOGIN</a>
-    <a href="#">SIGN UP</a>
+
+    
+    {% if user.is_authenticated %}
+    <a href="#">MYPAGE</a>
+    <a href="{% url 'userapp:logout' %}">LOGOUT</a>
+
+    {% else %}
+    <a href="{% url 'userapp:login' %}">LOGIN</a>
+    <a href="{% url 'userapp:join' %}">JOIN US</a>
+
+    {% endif %}
+      
+    
     <a href="{% url 'questionapp:order' %}">상담 / 주문제작</a>
   </div>
 </header>
