@@ -41,11 +41,15 @@ button {
 }
 
 .orderCreate .form-group {
+width: 100%;
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 2rem 0;
+  justify-content: flex-start;
+  margin: 2rem 0 0;
+  border-bottom: 0.1rem solid var(--gray);
+  padding: 0 0 2rem;
 }
 
 .orderCreate .form-text {

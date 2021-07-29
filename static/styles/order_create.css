@@ -39,11 +39,6 @@
   flex-direction: row;
 }
 
-.orderCreate .form-group {
-    border-bottom: 0.1rem solid var(--light-gray);
-    padding: 0 0 2rem;
-}
-
 .orderCreate .form-group > label:nth-child(1) {
     width: 10rem;
 }
@@ -52,7 +47,16 @@
     font-size: 0.9rem;
 }
 
-/* .orderCreate .form-group:nth-child(3), .orderCreate .form-group:nth-child(4) {
-    width: 50%;
-    
-} */
+.form-group-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-group-row-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
