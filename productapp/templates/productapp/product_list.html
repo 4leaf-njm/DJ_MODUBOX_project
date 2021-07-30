@@ -3,7 +3,16 @@
 
 {% block content %}
 
-{% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="제품소개" %}
+{% if request.path == "/product/intro/1" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%86%E1%85%A1%E1%86%BD%E1%84%8E%E1%85%AE%E1%86%B7%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3.png?alt=media&token=67aeb068-c655-451c-829e-06b73ec22b1c" menu="제품소개" %}
+
+{% elif request.path == "/product/intro/2"%}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=1559016b-6d76-472c-9ed5-e24f0e3ab6aa" menu="제품소개" %}
+
+{% elif request.path == "/product/intro/3" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=d8e01949-41b4-458c-823c-f5718182adb3" menu="제품소개" %}
+{% endif %}
+  
 
 <section class="container pp">
 
