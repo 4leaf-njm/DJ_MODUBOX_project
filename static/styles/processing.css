@@ -20,13 +20,25 @@
   margin-top: 4rem;
 }
 
-.processing .processing_img img {
+.processing .processing_img .image {
   width: 100%;
+}
+
+.processing .processing_img .mobile_img {
+  display: none;
 }
 
 @media screen and (max-width: 500px) {
   .processing .processing_text {
     padding: 1rem 4rem;
     font-size: 1.1rem;
+  }
+
+  .processing .processing_img .image {
+    display: none;
+  }
+
+  .processing .processing_img .mobile_img {
+    display: flex;
   }
 }

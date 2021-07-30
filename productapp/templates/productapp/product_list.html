@@ -3,7 +3,16 @@
 
 {% block content %}
 
-{% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="제품소개" %}
+{% if request.path == "/product/intro/1" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%86%E1%85%A1%E1%86%BD%E1%84%8E%E1%85%AE%E1%86%B7%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3.png?alt=media&token=67aeb068-c655-451c-829e-06b73ec22b1c" menu="제품소개" %}
+
+{% elif request.path == "/product/intro/2"%}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=1559016b-6d76-472c-9ed5-e24f0e3ab6aa" menu="제품소개" %}
+
+{% elif request.path == "/product/intro/3" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=d8e01949-41b4-458c-823c-f5718182adb3" menu="제품소개" %}
+{% endif %}
+  
 
 <section class="container pp">
 
@@ -19,9 +28,9 @@
      
 
     {% elif request.path == "/product/intro/2" %}
-      <article>B1</article>
-      <article>B2</article>
-      <article>B3</article>
+      <article><strong>SHOPPING BAG</strong>은 걸어다니는 광고물 이라고도 흔히들 말합니다.</article>
+      <article>쇼핑백을 제작하기 위해서는 <strong>사용목적, 특성, 디자인, 제작 비용</strong>에 따라 <strong>종이 재질과 가공 방법</strong>을 선택해야 하기 때문에</article>
+      <article>종지 재질에 따른 종류와 후 가공을 알아두면 유용하게 제작할 수 있습니다.</article>
 
       <h2>제품 특성에 맞는 쇼핑백을 만나보세요.
          <div class="light"></div>
@@ -29,9 +38,9 @@
      
 
     {% elif request.path == "/product/intro/3" %}
-      <article>C1</article>
-      <article>C2</article>
-      <article>C3</article>
+      <article><strong>행택(Hang Tag)</strong>은 <strong>종이위에 상호를 인쇄한 상표</strong>로서 제품의 스타일, 사이즈, 가격, 색상</article>
+      <article>또는 취급방법등 들을 소비자에게 알려주는 일종의 라벨입니다.</article>
+      <article>최근 행택도 다양한 모양과 지질, 디자인으로 차별화된 형태로 제작하는 추세입니다.</article>
 
       <h2>제품 특성에 맞는 행택을 만나보세요.
          <div class="light"></div>
@@ -39,9 +48,9 @@
      
 
     {% else %}
-      <article>A1</article>
-      <article>A2</article>
-      <article>A3</article>
+      <article><strong>PACKAGE</strong>를 제작하기 위해서는 <strong>상자의 크기, 지질, 인쇄 방법, 디자인, 후가공</strong>에 따라</article>
+      <article>제작 비용과 시간이 많이 차이나기 때문에 제작방식과 지질등을 미리 숙지해두시면</article>
+      <article>비용이나 제작 과정에서 빠르고 효율성있게 제작이 가능합니다.</article>
 
       <h2>제품 특성에 맞는 맞춤 박스를 만나보세요.
          <div class="light"></div>
@@ -53,8 +62,165 @@
 
 
 
-{% if request.path == "/product/intro/3" %}
+{% if request.path == "/product/intro/1" %}
+  <section class="container product_list">
+    {% for product in product_list %}
+      <div class="product_list_box">
+          <h2 class="product_list_box_title" name="{{product.title}}">{{product.title}}</h2>
+          <p class="product_list_box_content">
+            {{product.content | safe}}
+          </p>
+
+          <div class="product_list_box_title_images plbti">
+            
+            {% for image in product.images.all %}
+            <div class="plbti_imagebox">
+              <img src={{image.image_url.url}} alt="aaa"/>
+            </div>
+            {% endfor %}
+              
+            
+          </div>
+      </div>
+    {% endfor %}
+  </section>
+
+
+
+{% elif request.path == "/product/intro/2" %}
+  <section class="container product_list">
+    {% for product in product_list %}
+      <div class="product_list_box">
+          <h2 class="product_list_box_title" name="{{product.title}}">{{product.title}}</h2>
+          <p class="product_list_box_content">
+            {{product.content | safe}}
+          </p>
+
+          <div class="product_list_box_title_images plbti">
+            
+            {% for image in product.images.all %}
+            <div class="plbti_imagebox">
+              <img src={{image.image_url.url}} alt="aaa"/>
+            </div>
+            {% endfor %}
+              
+            
+          </div>
+      </div>
+    {% endfor %}
+
+      <div class="triangle"></div>
+      <div class="product_list2_box">
+        <h2 class="product_list2_box_title">쇼핑백 끈 종류</h2>
+        <p class="product_list2_box_content">
+          쇼핑백 제작에서 끈의 종류는 쇼핑백의 포인트가 될 수 있는 중요 부분입니다.
+        </p>
+        <p class="product_list2_box_content">
+          끈의 종류와 컬러의 선택에 따라 다양한 연출이 가능합니다.
+        </p>
+
+        <div class="product_list2">
+          <div class="product_list2_box2">
+            <div class="product_list2_box2_img">
+              <img 
+                width="100%"
+                src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2Fpp%E1%84%87%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%83%E1%85%B3%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=72a8a3e7-842c-4c27-bdb3-94bb8d34e39a" 
+                alt="쇼핑백 끈"/>
+            </div>
+
+            <div class="product_list2_box2_des">
+              <h2 class="product_list2_box2_subTitle">
+                PP브레이드끈
+              </h2>
+              <span>
+                쇼핑백 제작에서 가장 일반적으로 사용하는 끈의 종류입니다. 끈에 광택이 있는 것이 특징입니다.
+              </span>
+              <span>
+                쇼핑백 디자인에 맞는 컬러를 선택하여 사용한다면 멋진 쇼핑백을 완성할 수 있습니다.
+              </span>
+              <span>
+                PP브레이드끈은 후가공 중 아일렛과 많이 사용하고 있습니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="product_list2_box2">
+            <div class="product_list2_box2_img">
+              <img 
+                width="100%"
+                src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%86%E1%85%A7%E1%86%AB%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=c5a65fb7-ba19-4808-9b10-3bdf28c57d1c" 
+                alt="쇼핑백 끈"/>
+            </div>
+
+            <div class="product_list2_box2_des">
+              <h2 class="product_list2_box2_subTitle">
+                면 끈
+              </h2>
+              <span>
+                면 재질로 이뤄진 끈으로 광택이 없고 따뜻한 느낌을 줄 수 있는 끈의 종류입니다.
+              </span>
+              <span>
+                무거운 상품을 넣을 쇼핑백 제작에 어울리는 끈입니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="product_list2_box2">
+            <div class="product_list2_box2_img">
+              <img 
+                width="100%"
+                src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%85%E1%85%B5%E1%84%87%E1%85%A9%E1%86%AB%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=428265e5-a16f-4bb0-b4c1-485a75985b53" 
+                alt="쇼핑백 끈"/>
+            </div>
+
+            <div class="product_list2_box2_des">
+              <h2 class="product_list2_box2_subTitle">
+                리본끈
+              </h2>
+              <span>
+                리본끈은 선물 포장용에 사용하는 리본을 쇼핑백 끈으로 사용하는 케이스입니다.
+              </span>
+              <span>
+                리본끈을 이용할 경우 개성적인 세련된 느낌을 줄 수 있고
+              </span>
+              <span>
+                기존 쇼핑백보다는 좀 더 차별화 된 느낌을 줄 수 있는 것이 특징입니다.
+              </span>
+            </div>
+          </div>
+
+          <div class="product_list2_box2">
+            <div class="product_list2_box2_img">
+              <img 
+                width="100%"
+                src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%A1%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=e5a9541c-8260-47bb-8ae3-37bcc470e78e" 
+                alt="쇼핑백 끈"/>
+            </div>
+
+            <div class="product_list2_box2_des">
+              <h2 class="product_list2_box2_subTitle">
+                사출끈
+              </h2>
+              <span>
+                사출끈은 플라스틱으로 사출된 조형물 끈으로서 매우 견고한 것이 특징입니다.
+              </span>
+              <span>
+                주로 견고하고 중량감이 있는 내용물을 담을 때 가장 많이 사용됩니다.
+              </span>
+              <span>
+                그립감이 우수하고 흔들림 없이 안정적인 느낌을 줄 수 있습니다.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+{% elif request.path == "/product/intro/3" %}
+
   <h1>행택이얌</h1>
+
+
 {% else %}
   <section class="container product_list">
     {% for product in product_list %}
@@ -77,6 +243,7 @@
       </div>
     {% endfor %}
   </section>
+  
   
 {% endif %}
   
