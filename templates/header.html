@@ -50,7 +50,23 @@
 
 
 <header class="main_header_mobile">
-  <a class="header_logo_mobile" href="{% url 'core:home' %}">MOLOGO</a>
+  <a class="header_logo_mobile" href="{% url 'core:home' %}">
+    {% if logo_list %}
+
+      {% for logo in logo_list %}
+        {% if logo.title == "Main LOGO - [PC VERSION]" %}
+        <a href="{% url 'core:home' %}">
+          <img width="160px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+        </a>
+        {% endif %}
+    
+        {% endfor %}
+    {% else %}
+      <a href="{% url 'core:home' %}">
+        <img width="160px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FBLACK_COLOR_LOGO.png?alt=media&token=2fcb46c8-4607-41a4-b246-7fd70b032cd7" alt="logo" />
+      </a>
+    {% endif %}
+  </a>
 
   <span class="material-icons" onclick="javascript:toggleMobileHeader(true)"
     >menu</span
@@ -60,9 +76,63 @@
 <!-- MOBILE MENU -->
 <div id="mobile_menuBox" class="mobile_menuBox">
   <div class="mobile_menuBox__top">
+    <a class="header_logo_mobile" href="{% url 'core:home' %}">
+      {% if logo_list %}
+  
+        {% for logo in logo_list %}
+          {% if logo.title == "Main LOGO - [PC VERSION]" %}
+          <a href="{% url 'core:home' %}">
+            <img width="160px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+          </a>
+          {% endif %}
+      
+          {% endfor %}
+      {% else %}
+        <a href="{% url 'core:home' %}">
+          <img width="160px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FBLACK_COLOR_LOGO.png?alt=media&token=2fcb46c8-4607-41a4-b246-7fd70b032cd7" alt="logo" />
+        </a>
+      {% endif %}
+    </a>
+
     <span class="material-icons" onclick="javascript:toggleMobileHeader(false)"
-      >close</span
-    >
+      >close</span>
+  </div>
+  <div class="mobile_menuBox__join"> 
+    <div >로그인</div>
+    <div>회원가입</div>
+  </div>
+
+  <div class="mobile_menuBox_bottom">
+    <div class="mobile_menuBox_1">
+       <p>제품소개</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+       <p>맞춤박스</p>
+       <p>쇼핑백</p>
+       <p>행택</p>
+       <p>갤러리</p>
+    </div>
+    <div class="mobile_menuBox_2">
+       <p>제작안내</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+      <p>제작 & 디자인</p>
+      <p>주문 & 제작과정</p>
+   </div>
+    <div class="mobile_menuBox_3">
+       <p>고객지원</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+      <p>공지사항</p>
+      <p>자주묻는 질문</p>
+      <p>상담 / 견적의뢰</p>
+   </div>
+    <div class="mobile_menuBox_4">
+       <p>갤러리</p>
+    </div>
   </div>
 </div>
 

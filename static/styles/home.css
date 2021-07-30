@@ -97,11 +97,15 @@
 
 .section3_Box {
   position: relative;
-
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.section3_Box img {
+  height: 18.75rem;
 }
 
 .section3_Box::before {
@@ -269,7 +273,7 @@
     margin: 2rem 0;
   }
 
-  .section3_Box {
+  .section3_Box img {
     height: 12rem;
   }
 
