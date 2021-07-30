@@ -105,25 +105,35 @@
   justify-content: center;
 }
 
-/* 문의내용 */
 
-.form-group-textarea {
-  margin-top: 2rem;
-  padding: 0 3rem;
+
+.order_size_label {
+   display: inline;
+   width : 12rem;
+   font-size : 0.8rem;
 }
 
-.form-group-textarea .form-control {
+/* 문의내용 */
+
+.order_textarea_box {
+  margin-top: 2rem;
+  padding: 0 3rem;
+
+  align-items: flex-start !important;
+  flex-direction: column !important;
+}
+
+.order_textarea_box .form-control {
+  width : 100% !important;
   margin-top: 2rem;
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   padding: 1.8rem;
   color: rgb(201, 201, 201);
+  resize: none;
 }
 
-.form-group-textarea img {
-  margin: 0 0 0.5rem 0.5rem;
-}
 
 /* 첨부파일 */
 
@@ -198,4 +208,18 @@
 .order_botton a:hover:before {
   width: 500px;
   transition: all 1s;
+  color : var(--white);
 }
+
+
+.pro_type_box input[type='radio'] {
+  width : 20px !important;
+}
+
+.pro_type_box > div:not(:last-child) {
+  margin-right: 2rem;
+}
+
+
+
+
