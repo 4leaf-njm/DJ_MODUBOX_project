@@ -191,9 +191,8 @@
     margin-bottom: 1.125rem;
 }
 
-.product_list3_box{
+.product_list3_box img{
     width: 29rem;
-
 }
 
 .product_list3_box2{
@@ -203,4 +202,28 @@
 .product_list3_box_title{
     color: var(--theme);
     font-size: 1.75rem;
+}
+
+@media screen and (max-width: 500px) { 
+    .pp_title{
+        padding: 0 2rem;
+    }
+
+    .product_list_box_title_images.plbti {
+        display: flex;
+        flex-direction: column;
+    }
+
+   .product_list2_box{
+        padding: 2.625rem;
+   }
+
+   .product_list2_box2{
+        display: flex;
+        flex-direction: column;
+   }
+   
+   .product_list2_box2_img{
+       margin-bottom: 2rem;
+   }
 }
