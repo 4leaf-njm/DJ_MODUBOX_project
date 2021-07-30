@@ -199,7 +199,15 @@
     padding: 1.5rem;
 }
 
-.product_list3_box_title{
+.product_list3_img{
+    margin-bottom: 1.875rem;
+}
+
+.product_list3_img img{
+    width: 6.875rem;
+}
+
+.product_list3_box2_title{
     color: var(--theme);
     font-size: 1.75rem;
 }
