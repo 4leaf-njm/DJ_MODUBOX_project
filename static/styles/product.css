@@ -191,12 +191,17 @@
     margin-bottom: 1.125rem;
 }
 
+
+
 .product_list3_box img{
     width: 29rem;
 }
 
 .product_list3_box2{
+    
     padding: 1.5rem;
+
+    
 }
 
 .product_list3_img{
@@ -210,6 +215,15 @@
 .product_list3_box2_title{
     color: var(--theme);
     font-size: 1.75rem;
+}
+
+.product_list3_box3{
+    width: 25rem;
+    height: 10rem;
+    background-color: rgb(255, 174, 0, 0.5);
+    border-radius: 0 5rem;
+    
+    
 }
 
 @media screen and (max-width: 500px) { 
