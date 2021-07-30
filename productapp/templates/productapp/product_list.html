@@ -3,24 +3,84 @@
 
 {% block content %}
 
-<section class="container">
-  <div class="row">
-    <div class="col-12 col-lg-6">One of three columns</div>
-    <div class="col-12 col-lg-6">One of three columns</div>
+{% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="제품소개" %}
+
+<section class="container pp">
+
+  <div class="pp_title">
+    {% if request.path == "/product/intro/1" %}
+      <article><strong>PACKAGE</strong>를 제작하기 위해서는 <strong>상자의 크기, 지질, 인쇄 방법, 디자인, 후가공</strong>에 따라</article>
+      <article>제작 비용과 시간이 많이 차이나기 때문에 제작방식과 지질등을 미리 숙지해두시면</article>
+      <article>비용이나 제작 과정에서 빠르고 효율성있게 제작이 가능합니다.</article>
+
+      <h2>제품 특성에 맞는 맞춤 박스를 만나보세요.
+         <div class="light"></div>
+      </h2>
+     
+
+    {% elif request.path == "/product/intro/2" %}
+      <article>B1</article>
+      <article>B2</article>
+      <article>B3</article>
+
+      <h2>제품 특성에 맞는 쇼핑백을 만나보세요.
+         <div class="light"></div>
+      </h2>
+     
+
+    {% elif request.path == "/product/intro/3" %}
+      <article>C1</article>
+      <article>C2</article>
+      <article>C3</article>
+
+      <h2>제품 특성에 맞는 행택을 만나보세요.
+         <div class="light"></div>
+      </h2>
+     
+
+    {% else %}
+      <article>A1</article>
+      <article>A2</article>
+      <article>A3</article>
+
+      <h2>제품 특성에 맞는 맞춤 박스를 만나보세요.
+         <div class="light"></div>
+      </h2>
+     
+    {% endif %}
   </div>
-
-  <h1>Product</h1>
-
-  {% for product in product_list %}
-  <h4>{{product.title}}</h4>
-  {% for image in product.images.all %}
-  <img width="250px" src="{{image.image_url.url}}" alt="{{image.title}}" />
-  <h5>{{image.title}}</h5>
-  {% endfor %}
-  <!--  -->
-  <hr />
-  {% endfor %}
-  <!--  -->
 </section>
+
+
+
+{% if request.path == "/product/intro/3" %}
+  <h1>행택이얌</h1>
+{% else %}
+  <section class="container product_list">
+    {% for product in product_list %}
+      <div class="product_list_box">
+          <h2 class="product_list_box_title" name="{{product.title}}">{{product.title}}</h2>
+          <p class="product_list_box_content">
+            {{product.content | safe}}
+          </p>
+
+          <div class="product_list_box_title_images plbti">
+            
+            {% for image in product.images.all %}
+            <div class="plbti_imagebox">
+              <img src={{image.image_url.url}} alt="aaa"/>
+            </div>
+            {% endfor %}
+              
+            
+          </div>
+      </div>
+    {% endfor %}
+  </section>
+  
+{% endif %}
+  
+  
+
 
 {% endblock content %}
