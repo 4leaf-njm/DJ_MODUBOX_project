@@ -1,9 +1,12 @@
 :root {
   --theme: #FBAC25;
   --sub-theme: #e67e22;
+  --light-theme: #F8EFE3;
   --white: #fff;
   --black: #000;
+  --light-black : #4D4D4D;
   --gray: #D3D3D3;
   --light-gray: #F8F8F8;
+  --light-gray2: #eeeeee;
   
 }

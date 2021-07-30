@@ -12,6 +12,7 @@
 @import "./notice.css";
 @import "./login.css";
 @import "./user_create.css";
+@import "./product.css";
 
 .table-sm {
   font-size: 0.7rem;

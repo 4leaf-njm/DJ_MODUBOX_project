@@ -2,41 +2,46 @@
   <img src="{{img_source}}" alt="subBanner" />
 
 
-  
+
   {% if menu %}
-    
+
   <div class="sub_banner_tab">
     <ul id="sub_banner_tab_list">
-    
+
     </ul>
   </div>
 
   {% else %}
   <div></div>
   {% endif %}
-  
+
 </section>
 
 
 <script type="text/javascript">
-    const current_menu = "{{menu}}";
+  const current_menu = "{{menu}}";
 
-    const tab_ul = document.getElementById("sub_banner_tab_list");
+  const current_url = window.location.href;
 
-    menu_list.map(menu => {
+  const tab_ul = document.getElementById("sub_banner_tab_list");
+  menu_list.map((menu) => {
 
-        if(menu.name ===  current_menu) {
-            menu.sub_menu.map(in_menu => {
+    if (menu.name === current_menu) {
+      menu.sub_menu.map((in_menu, idx) => {
 
-                const li_tag = document.createElement("li");
-                const a_tag = document.createElement("a");
+        const li_tag = document.createElement("li");
+        const a_tag = document.createElement("a");
 
-                a_tag.innerText = in_menu.name
-                a_tag.href = in_menu.link
+        a_tag.innerText = in_menu.name
+        a_tag.href = in_menu.link
 
-                li_tag.appendChild(a_tag);
-                tab_ul.appendChild(li_tag);
-            })
+        if (current_url.indexOf(in_menu.link) !== -1) {
+          a_tag.classList.add("active")
         }
-    })
- </script>
+
+        li_tag.appendChild(a_tag);
+        tab_ul.appendChild(li_tag);
+      })
+    }
+  })
+</script>

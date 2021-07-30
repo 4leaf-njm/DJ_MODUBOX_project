@@ -1,70 +1,187 @@
 .main_header {
   width: 100%;
-  height: 5rem;
+
+}
+
+.main_header .main_header_top {
+  width : 100%;
+  height: 25px;
+  background-color: #eee;
+}
+
+.main_header .main_header_top .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.main_header .main_header_top .container a{
+  font-size : 0.8125rem;
+  margin : 0 1rem;
+  color : var(--light-black);
+
+  transition: 0.5s;
+}
+
+.main_header .main_header_top .container a:hover{
+  font-weight: 700;
+  color : var(--theme);
+}
+
+.main_header .main_header_top .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main_header .main_header_area {
+  height: 75px;
+  border-bottom: 1px solid var(--light-gray);
+  box-shadow: 1px 3px 3px var(--light-gray);
+}
+
+.pc_h {
+  height: 100%;
+}
+
+.pc_h .row {
+  height: 100%;
+}
+
+.pc_h .row .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pc_h .row .logo > img {
+  width : 10rem; 
+}
+
+
+
+.pc_h .row .menu {
+  width : 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.pc_h .row .menu .menu_nav {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 4rem;
-  box-shadow: 1px 1px 10px #eee;
-  background: linear-gradient(#000000, #434343);
-  color: #fff;
-}
-
-.main_header a {
-  color : #fff;
-
-}
-
-.main_header .menu_nav {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-
-  align-items: center;
-  justify-content: center;
-
-  margin: 0 1rem;
+  margin-top: 0.7rem;
 }
 
 
-.main_header .menu_nav li {
-  list-style: none;
-  cursor: pointer;
-  transition: 0.4s;
+.pc_h .row .menu .menu_nav li {
   position: relative;
-  margin: 0 3.5rem;
-  padding: 0.5rem;
+  padding: 1rem 0;
+  cursor: pointer;
+
+  transition: 0.5s;
 }
 
-.main_header .menu_nav li:hover {
+.pc_h .row .menu .menu_nav li:hover {
   color: var(--theme);
 }
+
+@keyframes continueButtonView {
+  0% {
+    box-shadow: 0px 0px 15px var(--sub-theme);
+  } 50% {
+    box-shadow: 0px 0px 0px var(--sub-theme);
+  } 100% {
+    box-shadow: 0px 0px 15px var(--sub-theme);
+  }
+}
+
+.menu .orderButton {
+    width : 10rem;
+    height: 1.8rem;
+    margin-left: 4.5rem;
+    font-size : 0.8rem;
+    text-align: center;
+    line-height: 1.8rem;
+
+    color : var(--white);
+    margin-bottom : 0.3825rem;
+
+    border-radius: 2rem;
+    background-color: var(--theme);
+    
+    animation: continueButtonView 1.6s infinite;
+    
+    transition: 0.5s;
+}
+
+
+.menu .orderButton:hover {
+  border: 1px solid var(--theme);
+  background-color: none;
+  background: none;
+  color : var(--theme);
+}
+
 
 .subMenuBox {
   display: none;
   position: absolute;
 }
 
+@keyframes appearMenu {
+  
+  0% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+
 .main_header .menu_nav li:hover .subMenuBox {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 9rem;
-  border-radius: 0.4rem;
-  box-shadow: 1px 1px 5px #eee;
+  width: 12rem;
+  border-radius: 0.65rem;
+  box-shadow: 1.5px 1.5px 7px #eee;
   background-color: #fff;
   padding: 1rem;
 
   top: 2.5rem;
   left: -1rem;
+
+  animation: appearMenu 1s forwards;
+}
+
+.main_header .menu_nav > li > a {
+  color : #000;
+  transition: 0.5s;
+}
+
+.main_header .menu_nav > li > a:hover {
+  color: var(--sub-theme);
 }
 
 .subMenuBox .subMenuBox__menu {
-  text-decoration: none;
   color: #000;
-  margin: 0.3rem 0;
-  transform: 0.4s;
+  transition: 0.5s;
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
 }
 
 .subMenuBox .subMenuBox__menu:hover {
@@ -77,20 +194,20 @@
   width: 100%;
   height: 5rem;
   box-shadow: 1px 1px 10px #eee;
-  background: linear-gradient(#000000, #434343);
+ 
   color: var(--white);
 
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .main_header_mobile > .material-icons {
   font-size: 2.2rem;
   cursor: pointer;
-  padding: 0.5rem;
   transition: 0.5s;
+  color: var(--black);
 }
 
 .main_header_mobile > .material-icons:hover {
@@ -122,7 +239,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgb(113, 113, 96);
+  background-color: var(--white);
   animation: viewMobileMenu 0.3s forwards;
 }
 
@@ -131,12 +248,14 @@
 }
 
 .mobile_menuBox__top {
+  height: 5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  padding: 1rem;
+  justify-content: space-between;
+  padding: 0 1rem;
   color: var(--white);
+  box-shadow: 1px 1px 10px #eee;
   cursor: pointer;
 }
 
@@ -148,4 +267,85 @@
   .main_header_mobile {
     display: flex;
   }
+}
+
+.mobile_menuBox__top > .material-icons {
+  color: var(--black);
+  
+}
+
+.mobile_menuBox__join {
+  padding: 1.8rem 0;
+  /* background-color: var(--light-theme); */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile_menuBox__join div:nth-child(1) {
+  width: 11rem;
+  height: 3rem;
+  background-color: var(--theme);
+  border-radius: 2rem;
+  box-shadow: 1px 1px 3px var(--gray);
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile_menuBox__join div:nth-child(2) {
+  width: 11rem;
+  height: 3rem;
+  border: 1px solid var(--theme);
+  border-radius: 2rem;
+  color: var(--theme) !important;
+  box-shadow: 1px 1px 3px var(--gray);
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile_menuBox_bottom {
+  margin-top: 3rem;
+}
+
+.mobile_menuBox_bottom p {
+  margin-bottom: 0;
+}
+
+.mobile_menuBox_bottom .mobile_menuBox_1, 
+.mobile_menuBox_bottom .mobile_menuBox_2,
+.mobile_menuBox_bottom .mobile_menuBox_3,
+.mobile_menuBox_bottom .mobile_menuBox_4 {
+  border-bottom: 1px solid var(--theme);
+  padding: 1rem;
+  font-size: 1.3rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile_menuBox_bottom .mobile_SubMenu li {
+display: flex;
+flex-direction: column;
+}
+
+.mobile_menuBox_bottom .mobile_subMenu p {
+  font-size: 1.1rem;
+  padding: 1rem 1.6rem;
+  border-bottom: 1px solid var(--light-gray2);
 }

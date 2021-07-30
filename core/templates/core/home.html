@@ -5,7 +5,19 @@
 {% block content %}
 <!--  -->
 
-<section class="home_mainBanner"></section>
+<section class="home_mainBanner">
+  <div class="slide">
+    <ul>
+      <li>
+        <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FMAINBANNER%2FMAIN_BANNER_01.png?alt=media&token=530cce66-12e9-4aed-8268-1582b991ff79" />
+      </li>
+      <li>
+        <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FMAINBANNER%2FMAIN_BANNER_02.png?alt=media&token=09139a15-2498-4822-a7ca-0e6c4d92663c" />
+      </li>
+    </ul>
+    
+  </div>
+</section>
 
 <div class="container">
   <section class="home_section1">
@@ -17,22 +29,28 @@
     </div>
 
     <div class="section1_txtBox1">
-      <span>ABOUT</span>
-      <span>ALL</span>
-      <span>BOX</span>
-      <span class="section1_title">-</span>
-      <span class="section1_title txt">모두박스</span>
+      <div class="section1_txtBox2 box1">
+        <span>ABOUT</span>
+        <span>ALL</span>
+        <span>BOX</span>
+        <span class="section1_title">-</span>
+        <span class="section1_title txt">모두박스</span>
+      </div>
 
-      <span class="section1_content">
-        고객의 요구를 파악하여 최상의 패키지를 제작하는 전문업체 모두박스입니다.
-      </span>
-      <span class="section1_content">
-        패키지를 통해 제품이 보다 가치 있을 수 있도록 패키지 기획부터 제작,
-        납품에 이르기까지
-      </span>
-      <span class="section1_content">
-        자부심을 가지고 고객과 구성원간의 소통, 신뢰, 협력을 중시하고 있습니다.
-      </span>
+      <div class="section1_txtBox2 box2">
+        <span class="section1_content">
+          고객의 요구를 파악하여 최상의 패키지를 제작하는 전문업체
+          모두박스입니다.
+        </span>
+        <span class="section1_content">
+          패키지를 통해 제품이 보다 가치 있을 수 있도록 패키지 기획부터 제작,
+          납품에 이르기까지
+        </span>
+        <span class="section1_content">
+          자부심을 가지고 고객과 구성원간의 소통, 신뢰, 협력을 중시하고
+          있습니다.
+        </span>
+      </div>
     </div>
   </section>
 
@@ -53,7 +71,7 @@
       <span>제작할 수 있습니다.</span>
     </div>
 
-    <div class="section2_Box">
+    <div class="section2_Box box1">
       <a href="{% url 'product:list' type=2 %}">
         <div class="section2_Box_Img">
           <img
@@ -91,10 +109,12 @@
 
 <section class="home_section3">
   <div class="section3_Box">
-    <img
-      width="100%"
-      src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%91%E1%85%A2%E1%84%89%E1%85%B3%202.png?alt=media&token=ea3d92d4-edc3-47bd-bafe-e54fa63868fe"
-    />
+    <div class="section_Box Img">
+      <img
+        width="100%"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%91%E1%85%A2%E1%84%89%E1%85%B3%202.png?alt=media&token=ea3d92d4-edc3-47bd-bafe-e54fa63868fe"
+      />
+    </div>
 
     <div class="section3_txtBox">
       <span class="section3_title">주문 및 제작과정</span>

@@ -26,6 +26,7 @@ class ProductAdmin(admin.ModelAdmin):
     fields = (
         "title",
         "type",
+        "content",
         "spec",
         "sort",
         "updated",

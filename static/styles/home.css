@@ -5,8 +5,22 @@
 
 .home_mainBanner {
   width: 100%;
-  background-color: #999;
 }
+
+
+.slide ul{
+  margin: 0;
+  padding: 0;
+
+  width: calc(100% * 2);
+  display:flex;
+  animation: slide 10s infinite;
+} /* slide를 8초동안 진행하며 무한반복 함 */
+
+.slide li{
+  width: calc(100% / 2);
+}
+
 
 .home_section1 {
   width: 100%;
@@ -27,7 +41,10 @@
   margin-left: 1.875rem;
   font-size: 1.875rem;
   line-height: 1.2;
+}
 
+.section1_txtBox2.box1,
+.box2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,11 +111,15 @@
 
 .section3_Box {
   position: relative;
-
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.section3_Box img {
+  height: 18.75rem;
 }
 
 .section3_Box::before {
@@ -171,6 +192,7 @@
   justify-content: flex-start;
 }
 
+
 .section4_txtBox1 {
   margin-top: 3.75rem;
 }
@@ -182,7 +204,7 @@
 
 .section4_bar {
   width: 5.625rem;
-  border: 1px solid var(--theme);
+  border: 0.0625rem solid var(--theme);
   margin-right: 0.625rem;
 }
 
@@ -220,4 +242,81 @@
 .carousel-item img {
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 500px) {
+  .home_section1 {
+    padding: 4rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .section1_imgBox {
+    width: 30rem;
+  }
+
+  .section1_txtBox1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section1_txtBox2.box1 {
+    font-size: 1.5rem;
+    width: 30%;
+  }
+
+  .section1_txtBox2.box2 {
+    width: 70%;
+  }
+
+  .home_section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section2_Box {
+    width: 25rem;
+  }
+
+  .section2_Box.box1 {
+    margin: 2rem 0;
+  }
+
+  .section3_Box img {
+    height: 12rem;
+  }
+
+  .home_section4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section4_Box1 {
+    padding: 0 2rem;
+  }
+
+  .section4_content.box {
+    margin-bottom: 2.5rem;
+  }
+
+  .section4_Box2 {
+    width: 27rem;
+    height: auto;
+    margin: 2rem 0;
+  }
+}
+
+@keyframes slide {
+  0% {margin-left:0;} /* 0 ~ 25  : 정지 */
+  25% {margin-left:0;} /* 25 ~ 50 : 변이 */
+  50% {margin-left:-100%;} /* 50 ~ 75 : 정지 */
+  75% {margin-left:-100%;} /* 75 ~ 100 : 변이 */
+  100% {margin-left:0;}
 }

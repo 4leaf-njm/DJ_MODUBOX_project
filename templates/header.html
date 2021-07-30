@@ -1,50 +1,72 @@
 {% load static %}
 
 <header class="main_header">
-  <a class="header_logo" href="{% url 'core:home' %}">
+    <section class="main_header_top">
+      <div class="container">
+        
+        {% if user.is_authenticated %}
+          <a href="#">마이페이지</a>
+          <a href="{% url 'userapp:logout' %}">로그아웃</a>
+        {% else %}
+          <a href="{% url 'userapp:login' %}">로그인</a>
+          <a href="{% url 'userapp:join' %}">회원가입</a>
+        {% endif %}
 
-    
-    {% if logo_list %}
-    {% for logo in logo_list %}
-    <!--  -->
-    {% if logo.title == "Main LOGO - [PC VERSION]" %}
-    <img width="120px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
-    {% endif %}
-    <!--  -->
-
-    {% endfor %}
-
-    {% else %}
-    <img width="120px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2Fmodu_logo_w.png?alt=media&token=e22b6cb1-4e52-4710-ba61-6fd6813b5a7e" alt="logo" />
-    {% endif %}
+        
+      </div>
+    </section>
+    <section class="main_header_area">
+      <div class="container pc_h">
+        <div class="row">
+          <div class="col logo">
+            {% if logo_list %}
       
+              {% for logo in logo_list %}
+                {% if logo.title == "Main LOGO - [PC VERSION]" %}
+                <a href="{% url 'core:home' %}">
+                  <img width="160px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+                </a>
+                {% endif %}
+            
+                {% endfor %}
+            {% else %}
+              <a href="{% url 'core:home' %}">
+                <img width="160px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FBLACK_COLOR_LOGO.png?alt=media&token=2fcb46c8-4607-41a4-b246-7fd70b032cd7" alt="logo" />
+              </a>
+            {% endif %}
 
-  
-  </a>
-
-
-  <ul class="menu_nav" id="menu_nav"></ul>
-
-  <div class="menu_nav_right">
-
-    
-    {% if user.is_authenticated %}
-    <a href="#">MYPAGE</a>
-    <a href="{% url 'userapp:logout' %}">LOGOUT</a>
-
-    {% else %}
-    <a href="{% url 'userapp:login' %}">LOGIN</a>
-    <a href="{% url 'userapp:join' %}">JOIN US</a>
-
-    {% endif %}
-      
-    
-    <a href="{% url 'questionapp:order' %}">상담 / 주문제작</a>
-  </div>
+          </div>
+          <div class="col menu">
+            <ul class="menu_nav" id="menu_nav"></ul>
+            <a class="orderButton" href="{% url 'questionapp:order' %}">상담 / 견적의뢰</a>
+          </div>
+       </div>
+      </div>
+    </section>
 </header>
 
+
+
+
+
 <header class="main_header_mobile">
-  <a class="header_logo_mobile" href="{% url 'core:home' %}">MOLOGO</a>
+  <a class="header_logo_mobile" href="{% url 'core:home' %}">
+    {% if logo_list %}
+
+      {% for logo in logo_list %}
+        {% if logo.title == "Main LOGO - [PC VERSION]" %}
+        <a href="{% url 'core:home' %}">
+          <img width="160px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+        </a>
+        {% endif %}
+    
+        {% endfor %}
+    {% else %}
+      <a href="{% url 'core:home' %}">
+        <img width="160px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FBLACK_COLOR_LOGO.png?alt=media&token=2fcb46c8-4607-41a4-b246-7fd70b032cd7" alt="logo" />
+      </a>
+    {% endif %}
+  </a>
 
   <span class="material-icons" onclick="javascript:toggleMobileHeader(true)"
     >menu</span
@@ -54,9 +76,63 @@
 <!-- MOBILE MENU -->
 <div id="mobile_menuBox" class="mobile_menuBox">
   <div class="mobile_menuBox__top">
+    <a class="header_logo_mobile" href="{% url 'core:home' %}">
+      {% if logo_list %}
+  
+        {% for logo in logo_list %}
+          {% if logo.title == "Main LOGO - [PC VERSION]" %}
+          <a href="{% url 'core:home' %}">
+            <img width="160px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+          </a>
+          {% endif %}
+      
+          {% endfor %}
+      {% else %}
+        <a href="{% url 'core:home' %}">
+          <img width="160px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FBLACK_COLOR_LOGO.png?alt=media&token=2fcb46c8-4607-41a4-b246-7fd70b032cd7" alt="logo" />
+        </a>
+      {% endif %}
+    </a>
+
     <span class="material-icons" onclick="javascript:toggleMobileHeader(false)"
-      >close</span
-    >
+      >close</span>
+  </div>
+  <div class="mobile_menuBox__join"> 
+    <div >로그인</div>
+    <div>회원가입</div>
+  </div>
+
+  <div class="mobile_menuBox_bottom">
+    <div class="mobile_menuBox_1">
+       <p>제품소개</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+       <p>맞춤박스</p>
+       <p>쇼핑백</p>
+       <p>행택</p>
+       <p>갤러리</p>
+    </div>
+    <div class="mobile_menuBox_2">
+       <p>제작안내</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+      <p>제작 & 디자인</p>
+      <p>주문 & 제작과정</p>
+   </div>
+    <div class="mobile_menuBox_3">
+       <p>고객지원</p>
+       <span class="material-icons">expand_more</span>
+    </div>
+    <div class="mobile_subMenu">
+      <p>공지사항</p>
+      <p>자주묻는 질문</p>
+      <p>상담 / 견적의뢰</p>
+   </div>
+    <div class="mobile_menuBox_4">
+       <p>갤러리</p>
+    </div>
   </div>
 </div>
 

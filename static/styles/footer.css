@@ -12,18 +12,60 @@ footer {
 
 .footer_info h4 {
   color: var(--theme);
+  margin-bottom: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.footer_info h4:before {
+    content : "";
+    display: block;
+    width : 3rem;
+    border-top: 0.2rem solid var(--theme);
+    padding : 0.225rem;
 }
 
 .footer_info .footer_info_text {
   margin: 0.4rem 0;
 }
 
+.footer_info .footer_info_logo {
+    width : 13rem;
+    margin-bottom: 1rem;
+}
+
+
+.footer_info .footer_info_account_txt {
+    margin-bottom: 0.6rem;
+}
+
+.footer_info .footer_info_modubox_logo {
+    width : 21.25rem;
+    text-align: center;
+}
+
+.footer_info .footer_info_modubox_txt {
+    margin-top: 4rem;
+    color : var(--white);
+    font-weight: 700;
+    text-align: center;
+}
+
+.fl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
 @media screen and (max-width: 576px) {
   footer {
     padding: 4rem;
   }
 
-  .footer_info .header_logo {
+  .footer_info .footer_logo {
     width: 100%;
     margin-top: 4rem;
     display: flex;
