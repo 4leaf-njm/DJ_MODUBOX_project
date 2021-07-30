@@ -1,8 +1,14 @@
 .user_create_box {
   width: 100%;
-  padding: 6.25rem 21.875rem 18.75rem 21.875rem;
+  padding: 6.25rem 0 10rem;
   border: 0.625rem solid #fbac25;
   border-radius: 4rem;
+}
+
+.user_create_box > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .user_create_title_wrapper {
@@ -38,8 +44,10 @@
 .create_user_label_input_wrapper4 input,
 .create_user_label_input_wrapper5 input {
   width: 31.25rem;
+  font-size: 0.9rem;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1rem 0.4rem !important;
 }
 
 .create_user_label_input_wrapper1 > label,
@@ -47,8 +55,26 @@
 .create_user_label_input_wrapper3 > label,
 .create_user_label_input_wrapper4 > label,
 .create_user_label_input_wrapper5 > label {
+  width: 8.5rem;
   font-size: 1rem;
   margin: 0.5rem 0 0 0;
+}
+
+.create_user_label_input_wrapper1 > label .star,
+.create_user_label_input_wrapper2 > label .star,
+.create_user_label_input_wrapper3 > label .star,
+.create_user_label_input_wrapper4 > label .star,
+.create_user_label_input_wrapper5 > label .star {
+  position: relative;
+  left: 0.3rem;
+  color: var(--theme);
+  font-size: 1.4rem;
+}
+
+.user_create_input_desc {
+  display: block;
+  margin: 10px 0 0;
+  font-size: 0.85rem;
 }
 
 .user_create_input_desc > div > p {
@@ -60,6 +86,8 @@
 .create_user_form_group3,
 .create_user_form_group4,
 .create_user_form_group5 {
+  display: flex;
+  justify-content: center;
   margin: 0 0 2.375rem 0;
 }
 
@@ -79,13 +107,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 1rem;
 }
 
 .user_create_policy_title1 {
-  margin: 3.125rem 0 1.875rem 0;
+  margin: 1rem 0 1.3rem 0;
 }
 .user_create_policy_title2 {
-  margin: 1.875rem 0;
+  margin: 1.3rem 0 1.3rem;
 }
 
 .user_create_checkbox {
@@ -93,15 +122,22 @@
 }
 
 .user_create_policy > pre {
-  height: 11.8rem;
+  height: 11.6rem;
   width: 100%;
   white-space: pre-wrap;
   overflow-y: scroll;
   padding: 1rem;
 }
 
+.user_create_policy1,
+.user_create_policy2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40rem;
+}
+
 .user_create_policy {
-  width: 38.75rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
   border-radius: 0.5rem;
 }
