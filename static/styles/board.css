@@ -16,7 +16,20 @@
 }
 
 .board_detail__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1rem;
   border-bottom: 1.5px solid #ccc;
+}
+
+.board_detail__title > h2 {
+  font-size: 1.8rem;
+}
+
+.board_detail__hit {
+  font-size: 0.9rem;
 }
 
 .board_detail__info {
@@ -25,7 +38,7 @@
   align-items: center;
   justify-content: space-between;
 
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #999;
 }
 

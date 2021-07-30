@@ -10,22 +10,20 @@
 
 - [ ] Auth User Custom
 
-
 # SCREEN
+
 - [x] Main Page [x]
-- [ ] Product [ ]           - KDH
+- [ ] Product [ ] - KDH
 - [x] Design [x]
 - [x] Processding [x]
-- [ ] Notice [ ]            - NJM
-- [ ] Faq [ ]               - NJM
-- [ ] Order [ ]             - HYK
-- [ ] SubBanner [ ]         - STS, HMG
-- [x] Header [ ]            - KHJ
-- [x] Footer [x]      
-- [ ] Login [ ]             - OMH
-- [ ] Join [ ]              - OMH
-- [ ] Edit Profile [ ]      - NJM
-- [ ] Find Id [ ]           - NJM
-- [ ] Find Password [ ]     - NJM
-
-
+- [ ] Notice [ ] - NJM
+- [ ] Faq [ ] - NJM
+- [ ] Order [ ] - HYK
+- [ ] SubBanner [ ] - STS, HMG
+- [x] Header [ ] - KHJ
+- [x] Footer [x]
+- [ ] Login [ ] - OMH
+- [ ] Join [ ] - OMH
+- [ ] Edit Profile [ ] - NJM
+- [ ] Find Id [ ] - NJM
+- [ ] Find Password [ ] - NJM
