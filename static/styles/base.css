@@ -12,9 +12,6 @@
 @import "./notice.css";
 @import "./product.css";
 
-
-
-
 .table-sm {
   font-size: 0.7rem;
 }
@@ -42,7 +39,7 @@ button {
 }
 
 .orderCreate .form-group {
-width: 100%;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
@@ -50,7 +47,11 @@ width: 100%;
   justify-content: flex-start;
   margin: 2rem 0 0;
   border-bottom: 0.1rem solid var(--gray);
-  padding: 0 0 2rem;
+  padding: 0 3rem 2rem;
+}
+
+.orderCreate .form-group img {
+  margin: 0 0 0.5rem 0.5rem;
 }
 
 .orderCreate .form-text {
@@ -58,15 +59,16 @@ width: 100%;
 }
 
 .orderCreate .form-group > label:nth-child(1) {
-  width: 10rem;
+  width: 8rem;
 }
+
 .orderCreate .form-group > input,
 .orderCreate .form-group > select,
 .orderCreate .form-group > textarea {
   width: 25rem;
   border: none;
   border-radius: 0.5rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 li {
@@ -87,10 +89,10 @@ a:hover {
   }
 
   .design_desc {
-    font-size : 0.8rem;
+    font-size: 0.8rem;
   }
 
   .design_box_1 {
-    font-size :0.8rem;
+    font-size: 0.8rem;
   }
 }
