@@ -30,20 +30,21 @@
   justify-content: center;
   color: #fff;
   font-size: 1.125rem;
+  line-height: 1.1;
 }
 
 /* login_box_2_AREA  */
 
 .login_box_2 {
   width: 50%;
-  padding: 4.375rem 5.3125rem;
+  padding: 4rem 5rem;
 }
 
 .login_title_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0 2.375rem 0;
+  margin: 0 0 4rem 0;
 }
 
 .login_title_wrapper > h2 {
@@ -84,11 +85,12 @@
 
 .login_input_wrapper1 > label,
 .login_input_wrapper2 > label {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-align: right;
 }
 
 .login_input_wrapper1 {
-  margin: 0 0 2.75rem 0;
+  margin: 0 0 2.5rem 0;
 }
 .login_input_wrapper2 {
   display: flex;
@@ -99,8 +101,10 @@
 
 .login_input {
   width: 25rem;
+  font-size: 0.9rem;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 0.5rem;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 0.5rem !important;
 }
 
 .login_join_find_wrapper {
@@ -113,9 +117,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 13.75rem;
 }
 .login_join_find > a {
+  margin: 0 1rem;
   text-decoration: none;
   color: #000;
   font-size: 0.8125rem;
