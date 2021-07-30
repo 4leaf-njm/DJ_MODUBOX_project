@@ -1,0 +1,107 @@
+.user_create_box {
+  width: 100%;
+  padding: 6.25rem 21.875rem 18.75rem 21.875rem;
+  border: 0.625rem solid #fbac25;
+  border-radius: 4rem;
+}
+
+.user_create_title_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 3.125rem 0;
+}
+
+.user_create_title_wrapper > h2 {
+  font-size: 1.5625rem;
+  margin: 0 0 0.875rem 0;
+}
+
+.user_create_subtitle_y {
+  color: #fbac25;
+  font-size: 1rem;
+}
+
+.create_user_label_input_wrapper1,
+.create_user_label_input_wrapper2,
+.create_user_label_input_wrapper3,
+.create_user_label_input_wrapper4,
+.create_user_label_input_wrapper5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.create_user_label_input_wrapper1 input,
+.create_user_label_input_wrapper2 input,
+.create_user_label_input_wrapper3 input,
+.create_user_label_input_wrapper4 input,
+.create_user_label_input_wrapper5 input {
+  width: 31.25rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
+}
+
+.create_user_label_input_wrapper1 > label,
+.create_user_label_input_wrapper2 > label,
+.create_user_label_input_wrapper3 > label,
+.create_user_label_input_wrapper4 > label,
+.create_user_label_input_wrapper5 > label {
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.user_create_input_desc > div > p {
+  margin: 0;
+}
+
+.create_user_form_group1,
+.create_user_form_group2,
+.create_user_form_group3,
+.create_user_form_group4,
+.create_user_form_group5 {
+  margin: 0 0 2.375rem 0;
+}
+
+.user_create_button {
+  width: 38.75rem;
+  height: 2.5rem;
+  background: #fbac25;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
+  color: #fff;
+  margin: 2.125rem 0 0 0;
+}
+
+.user_create_policy_title1,
+.user_create_policy_title2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user_create_policy_title1 {
+  margin: 3.125rem 0 1.875rem 0;
+}
+.user_create_policy_title2 {
+  margin: 1.875rem 0;
+}
+
+.user_create_checkbox {
+  margin: 0 0.5rem 0 0;
+}
+
+.user_create_policy > pre {
+  height: 11.8rem;
+  width: 100%;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.user_create_policy {
+  width: 38.75rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
+  border-radius: 0.5rem;
+}

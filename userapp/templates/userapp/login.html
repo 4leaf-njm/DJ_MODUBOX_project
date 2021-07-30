@@ -3,57 +3,84 @@
 
 {% block content %}
 
-{% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg"%}
+{% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB.png?alt=media&token=a4a0e055-53b7-44a0-a266-f549a1827e84"%}
 
 <section class="container">
-  <h2>Login</h2>
 
-  <form action="{% url 'userapp:login' %}" method="POST">
-    {% csrf_token %}
-    <!--  -->
-    <input
-      type="hidden"
-      name="csrfmiddlewaretoken"
-      value="cuvNFUigfEHUpyYbeF0qV6lf6bEXC1KNJHhxoz3KzgmR2f0mLtSQA0IHLwzb3POQ"
-    />
-    <!--  -->
-    <div class="form-group">
-      <label for="id_username">사용자 이름</label
-      ><input
-        type="text"
-        name="username"
-        autofocus
-        autocapitalize="none"
-        autocomplete="username"
-        maxlength="150"
-        class="form-control"
-        placeholder="사용자 이름"
-        title=""
-        required
-        id="id_username"
-      />
+  <div class="login_box">
+    <div class="login_box_1">
+      <img src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FWHITE_COLOR_BIG_LOGO.png?alt=media&token=0feee208-332b-4791-b7c2-cb6be147a172" alt="" class="login_box_logoImage"/>
+      <div class="login_box_1_texts">
+        <p>로그인을 이용하여</p>
+        <p>모두박스의 모든 서비스를 이용해보세요.</p>
+        <br/>
+        <p>방문해주신 모든 고객님께</p>
+        <p>더 나은 서비스를 위해 항상 노력하겠습니다.</p>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="id_password">비밀번호</label
-      ><input
-        type="password"
-        name="password"
-        autocomplete="current-password"
-        class="form-control"
-        placeholder="비밀번호"
-        title=""
-        required
-        id="id_password"
-      />
+    <div class="login_box_2">
+      <div class="login_title_wrapper">
+      <h2>로그인</h2>
+      <span class="login_subtitle"><span class="login_subtitle_y">모두박스</span>를 이용하기 위해서 로그인을 해보새요.</span>
     </div>
+      <form action="{% url 'userapp:login' %}" method="POST">
+      {% csrf_token %}
+      <!--  -->
+      <input
+        type="hidden"
+        name="csrfmiddlewaretoken"
+        value="cuvNFUigfEHUpyYbeF0qV6lf6bEXC1KNJHhxoz3KzgmR2f0mLtSQA0IHLwzb3POQ"
+      />
+    <!--  -->
+    <div class="login_area">
 
-    <input type="submit" value="LOGIN" />
-  </form>
+      <div class="form-group login_input_wrapper1">
 
-  <section>
-    <a href="#">회원가입</a>
-    <a href="#">아이디 찾기 | 비밀번호 찾기</a>
-  </section>
+        <label for="id_username">아이디</label
+        ><input
+          type="text"
+          name="username"
+          autofocus
+          autocapitalize="none"
+          autocomplete="username"
+          maxlength="150"
+          class="form-control login_input"
+          placeholder="아이디 입력해주세요."
+          title=""
+          required
+          id="id_username"
+        />
+      </div>
+      <div class="form-group login_input_wrapper2" >
+
+        <label for="id_password">비밀번호</label
+        ><input
+          type="password"
+          name="password"
+          autocomplete="current-password"
+          class="form-control login_input"
+          placeholder="비밀번호 입력해주세요."
+          title=""
+          required
+          id="id_password"
+        />
+        
+      </div>
+      <input type="submit" value="LOGIN" />
+    </div>
+    </form>
+
+    <section class="login_join_find_wrapper">
+      <div class="login_join_find">
+        <a href="#">회원가입</a>
+        <a href="#">
+          아이디 찾기 / 비밀번호 찾기
+        </a>
+      </div>
+      
+    </section>
+  </div>
+  </div>
 </section>
 
 {% endblock content %}
