@@ -3,7 +3,9 @@
 
 {% block content %}
 <!--  -->
-{% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b" menu="고객지원" %}
+{% include 'snippets/sub_banner.html' with
+img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b"
+menu="고객지원" %}
 
 <div class="container orderCreate">
   <div class="order mt-5">
@@ -13,15 +15,16 @@
       확인해보세요.
     </div>
   </div>
-  <div class="order_title_1">고객정보</div>
+  <div class="order_subTitle">고객정보</div>
   <form action="{% url 'questionapp:order' %}" method="POST">
     {% csrf_token %}
     <!--  -->
 
     <div class="form-group">
       <label for="id_title">
-        <span class="material-icons">info</span>
-        제작의뢰명</label
+        제작의뢰명<img
+          alt="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
       ><input
         type="text"
         name="title"
@@ -35,7 +38,10 @@
     </div>
     <div class="form-group-row">
       <div class="form-group">
-        <label for="id_company">상 호</label
+        <label for="id_company">상 호<img
+          alt="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+      ></label
         ><input
           type="text"
           name="company"
@@ -48,7 +54,10 @@
         />
       </div>
       <div class="form-group">
-        <label for="id_name">성 명</label
+        <label for="id_name">성 명<img
+          alt="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+      ></label
         ><input
           type="text"
           name="name"
@@ -59,10 +68,13 @@
           required
           id="id_name"
         />
-    </div>
+      </div>
     </div>
     <div class="form-group">
-      <label for="id_password">비밀번호</label
+      <label for="id_password">비밀번호<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><input
         type="password"
         name="password"
@@ -79,7 +91,10 @@
     </div>
     <div class="form-group-row-2">
       <div class="form-group">
-        <label for="id_tel">연락처</label
+        <label for="id_tel">연락처<img
+          alt="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+      ></label
         ><input
           type="text"
           name="tel"
@@ -92,7 +107,10 @@
         />
       </div>
       <div class="form-group">
-        <label for="id_email">이메일</label
+        <label for="id_email">이메일<img
+          alt="icon"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+      ></label
         ><input
           type="email"
           name="email"
@@ -104,20 +122,23 @@
           id="id_email"
         />
       </div>
-  </div>
-  
+    </div>
+    <div class="order_subTitle">제작사양</div>
     <div class="form-group">
-      <label for="id_pro_type">제작물</label
-      >
-        <input type="radio" name="pro_type" value="패키지">
-        <input type="radio" name="pro_type" value="쇼핑백">
-        <input type="radio" name="pro_type" value="형택">
-        <input type="radio" name="pro_type" value="기타제작물">
-      
-      
+      <label for="id_pro_type">제작물<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label>
+      <input type="radio" name="pro_type" value="패키지" />
+      <input type="radio" name="pro_type" value="쇼핑백" />
+      <input type="radio" name="pro_type" value="형택" />
+      <input type="radio" name="pro_type" value="기타제작물" />
     </div>
     <div class="form-group">
-      <label for="id_pro_qny">제작수량</label
+      <label for="id_pro_qny">제작수량<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><input
         type="number"
         name="pro_qny"
@@ -128,30 +149,49 @@
         id="id_pro_qny"
       />
     </div>
-    <div class="form-group">
-      <label for="id_size_width">사이즈 가로(mm)</label
-      ><input
-        type="number"
-        name="size_width"
-        class="form-control"
-        placeholder="사이즈 가로(mm)"
-        title=""
-        required
-        id="id_size_width"
-      />
+
+    <div class="form-group-size">
+      <label for="id_pro_qny">사이즈</label>
+      <div class="form-group-sizeList">
+        <div class="form-group-sizeList-1">
+          <label for="id_size_width">사이즈 가로(mm)</label
+          ><input
+            type="number"
+            name="size_width"
+            class="form-control"
+            placeholder="사이즈 가로(mm)"
+            title=""
+            required
+            id="id_size_width"
+          />
+        </div>
+        <div class="form-group-sizeList-2">
+          <label for="id_size_width">사이즈 가로(mm)</label
+          ><input
+            type="number"
+            name="size_width"
+            class="form-control"
+            placeholder="사이즈 가로(mm)"
+            title=""
+            required
+            id="id_size_width"
+          />
+        </div>
+        <div class="form-group-sizeList-3">
+          <label for="id_size_length">사이즈 세로(mm)</label
+          ><input
+            type="number"
+            name="size_length"
+            class="form-control"
+            placeholder="사이즈 세로(mm)"
+            title=""
+            required
+            id="id_size_length"
+          />
+        </div>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="id_size_length">사이즈 세로(mm)</label
-      ><input
-        type="number"
-        name="size_length"
-        class="form-control"
-        placeholder="사이즈 세로(mm)"
-        title=""
-        required
-        id="id_size_length"
-      />
-    </div>
+
     <div class="form-group">
       <label for="id_size_height">사이즈 높이(mm)</label
       ><input
@@ -165,7 +205,10 @@
       />
     </div>
     <div class="form-group">
-      <label for="id_design_yn">디자인 유/무</label
+      <label for="id_design_yn">디자인 유/무<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><select name="design_yn" class="form-control" title="" id="id_design_yn">
         <option value="없음" selected>없음</option>
 
@@ -173,7 +216,10 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="id_paper_type">종이재질</label
+      <label for="id_paper_type">종이재질<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><select
         name="paper_type"
         class="form-control"
@@ -192,7 +238,10 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="id_print_spec">인쇄사양</label
+      <label for="id_print_spec">인쇄사양<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><select
         name="print_spec"
         class="form-control"
@@ -212,7 +261,7 @@
         <option value="기타인쇄">기타인쇄</option>
       </select>
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label for="id_coating">코 팅</label
       ><select name="coating" class="form-control" title="" id="id_coating">
         <option value="없음" selected>없음</option>
@@ -234,50 +283,54 @@
         required
         id="id_processing"
       />
-    </div>
-    <div class="form-group">
-      <label for="id_content">문의내용</label
+    </div> -->
+    <div class="form-group-textarea">
+      <label for="id_content">문의내용<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label
       ><textarea
         name="content"
         cols="40"
         rows="10"
         class="form-control"
-        placeholder="문의내용"
+        placeholder="문의 내용을 상세하게 입력해주세요."
         title=""
         required
         id="id_content"
       >
       </textarea>
     </div>
-    <div class="form-group">
-      <label for="id_file_1">첨부파일1</label><br /><input
+
+    <div class="file-group">
+      <label for="id_content">첨부파일<img
+        alt="icon"
+        src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2Ficon.png?alt=media&token=965bebfb-53f3-4019-8c86-9f7bb5ffbdf3" /></label
+    ></label>
+      <div class="file-groupBox">
+        <input
         type="file"
         name="file_1"
         class="form-control-file"
         title=""
-        id="id_file_1"
-      />
-    </div>
-    <div class="form-group">
-      <label for="id_file_2">첨부파일2</label><br /><input
+        id="id_file_1"/>
+        <input
         type="file"
         name="file_2"
         class="form-control-file"
         title=""
-        id="id_file_2"
-      />
-    </div>
-    <div class="form-group">
-      <label for="id_file_3">첨부파일3</label><br /><input
+        id="id_file_2"/>
+        <input
         type="file"
         name="file_3"
         class="form-control-file"
         title=""
-        id="id_file_3"
-      />
+        id="id_file_3"/>
+      </div>
     </div>
-
-    <input type="submit" value="견적 문의" />
+    <div class="order_botton">
+       <a href="#">견적의뢰서 작성완료</a>
+    </div>
   </form>
 </div>
 
