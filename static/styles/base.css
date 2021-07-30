@@ -10,6 +10,8 @@
 @import "./processing.css";
 @import "./order_create.css";
 @import "./notice.css";
+@import "./login.css";
+@import "./user_create.css";
 @import "./product.css";
 
 .table-sm {

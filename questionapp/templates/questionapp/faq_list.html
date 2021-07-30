@@ -5,7 +5,12 @@
 <!--  -->
 {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b" menu="고객지원" %}
 
-<div class="container">
+<div class="container mt-5 text-center faq">
+  <h3 class="faq_title">FAQ</h3>
+  <article class="faq_desc">
+    <span>모두박스</span>의 FAQ를 확인해보세요.
+  </article>
+
   <!-- questionapp/models.py -> QnaBoard Class -> TYPE CHOICE 튜플 확인 -->
   <section class="faq_type_select_area">
     <form action="{% url 'questionapp:faq' %}" method="GET">
@@ -34,6 +39,18 @@
   </div>
 
   {% endfor %}
+
+  <div class="faq_box">
+    <h5>
+      <div class="faq_box_1">Q</div>
+      <div>a</div>
+    </h5>
+    <div class="faq_box_answer">
+      <div class="faq_box_2">A</div>
+      <div>b</div>
+    </div>
+  </div>
+
 </div>
 
 <script src="{% static 'js/faq.js' %}"></script>

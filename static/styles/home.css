@@ -5,8 +5,22 @@
 
 .home_mainBanner {
   width: 100%;
-  background-color: #999;
 }
+
+
+.slide ul{
+  margin: 0;
+  padding: 0;
+
+  width: calc(100% * 2);
+  display:flex;
+  animation: slide 10s infinite;
+} /* slide를 8초동안 진행하며 무한반복 함 */
+
+.slide li{
+  width: calc(100% / 2);
+}
+
 
 .home_section1 {
   width: 100%;
@@ -297,4 +311,12 @@
     height: auto;
     margin: 2rem 0;
   }
+}
+
+@keyframes slide {
+  0% {margin-left:0;} /* 0 ~ 25  : 정지 */
+  25% {margin-left:0;} /* 25 ~ 50 : 변이 */
+  50% {margin-left:-100%;} /* 50 ~ 75 : 정지 */
+  75% {margin-left:-100%;} /* 75 ~ 100 : 변이 */
+  100% {margin-left:0;}
 }
