@@ -44,27 +44,29 @@
         <h4>BANK INFO</h4>
 
         <img
-          width="200px"
-          src="https://blog.kakaocdn.net/dn/qAwyo/btqyWLbmOAD/9eqyPAko6fuK9ycDeAcYrk/img.jpg"
+          class="footer_info_logo"
+          src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2Fbanklogo.png?alt=media&token=8e0d7b1a-ec88-42ef-bcfa-89a43b4e5389"
           alt="bank_logo"
         />
-        <div>1002-982-010204</div>
-        <div>예금주 : 이윤하(모두박스)</div>
+        <div class="footer_info_account_txt">1002-982-010204</div>
+        <div class="footer_info_account_txt">예금주 : 이윤하(모두박스)</div>
       </div>
-      <div class="col-xs-12 col-sm-4 footer_info">
-        <a class="header_logo" href="{% url 'core:home' %}">
+      <div class="col-xs-12 col-sm-4 footer_info fl">
+        <a class="footer_logo" href="{% url 'core:home' %}">
           {% if logo_list %}
           {% for logo in logo_list %}
           <!--  -->
           {% if logo.title == "Footer LOGO - [PC VERSION]" %}
-          <img width="120px" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+          <img class="footer_info_modubox_logo" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+          <p class="footer_info_modubox_txt">MODOBOX ALL Rights Reserved</p>
           {% endif %}
           <!--  -->
 
           {% endfor %}
 
           {% else %}
-          <img width="120px" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2Fmodu_logo_w.png?alt=media&token=e22b6cb1-4e52-4710-ba61-6fd6813b5a7e" alt="logo" />
+          <img class="footer_info_modubox_logo" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FWHITE_COLOR_LOGO.png?alt=media&token=bbd2f88f-f051-4ee0-b7cd-ce6dd714bd00" alt="logo" />
+          <p class="footer_info_modubox_txt">MODOBOX ALL Rights Reserved</p>
           {% endif %}
         </a>
       </div>

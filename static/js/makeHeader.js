@@ -19,7 +19,7 @@ const menu_list = [
     sub_menu: [
       { name: "공지사항", link: "/board/notice" },
       { name: "자주묻는 질문", link: "/question/faq" },
-      { name: "상담/ 주문제작", link: "/question/order" },
+      { name: "상담 / 견적의뢰", link: "/question/order" },
     ],
   },
 ];
