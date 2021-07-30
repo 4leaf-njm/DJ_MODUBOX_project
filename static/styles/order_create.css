@@ -152,6 +152,7 @@
   background-color: transparent;
   border-radius: 1rem;
   color: var(--theme);
+  box-shadow: 3px 5px 6px var(--light-gray2);
 
   display: flex;
   align-items: center;
