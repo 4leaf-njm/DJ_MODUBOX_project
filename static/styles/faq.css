@@ -1,3 +1,16 @@
+.faq .faq_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.faq .faq_desc {
+  font-size: 0.9375rem;
+}
+
+.faq .faq_desc > span {
+  color: var(--theme);
+}
+
 .faq_type_select_area {
   display: flex;
   flex-direction: row;
@@ -27,22 +40,23 @@
 }
 
 .faq_type_select_area form .faq_type_button.active {
-  background: linear-gradient(#FBAC25, #fffde4);
+  background: linear-gradient(#fbac25, #fffde4);
   color: var(--white);
   border: none;
 }
 
 .faq_box {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .faq_box h5 {
   width: 100%;
-  height: 6rem;
+  height: 5rem;
   background-color: var(--light-gray);
-  border-radius: 2rem;
+  border-radius: 20px;
   color: var(--black);
   padding: 0 2rem;
+  margin: 0;
 
   display: flex;
   flex-direction: row;
@@ -50,20 +64,20 @@
   justify-content: flex-start;
   cursor: pointer;
   transition: 0.4s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 .faq_box h5 .faq_box_1 {
   margin-right: 2rem;
+  font-weight: 900;
 }
 
 .faq_box .active {
-  border-radius: 2rem;
   background-color: var(--theme);
   color: var(--white);
 }
 
 .faq_box h5:hover {
-  border-radius: 2rem;
   background-color: var(--theme);
   color: var(--white);
 }
@@ -73,15 +87,18 @@
 } */
 
 .faq_box .faq_box_answer {
-  padding: 2.5rem 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  padding: 1.5rem 2rem;
+  min-height: 9rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   font-size: 1.2rem;
 
-  display: flex;
+  display: none;
   flex-direction: row;
 }
 
 .faq_box .faq_box_answer .faq_box_2 {
   margin-right: 2rem;
+  width: auto;
+  font-weight: 900;
 }
