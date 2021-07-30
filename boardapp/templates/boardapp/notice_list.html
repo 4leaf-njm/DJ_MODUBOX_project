@@ -5,38 +5,59 @@
 <!--  -->
 {% include 'snippets/sub_banner.html' with img_source="https://i.pinimg.com/originals/60/a5/14/60a5141b683add6729fa6eaae3477b21.jpg" menu="고객지원" %}
 
-<div class="container mt-5">
-  <form action="{% url 'boardapp:notice_list' %}" , method="GET">
-    <input type="text" name="search" />
-    <input type="submit" value="검색" />
-  </form>
+<div class="container mt-5 text-center notice">
+  <h3 class="notice_title">공지사항</h3>
+  <article class="notice_desc">
+    <span>모두박스</span>의 새로운 소식을 확인해보세요.
+  </article>
 
-  <table class="table table-striped table-hover table-sm">
-    <thead>
-      <tr>
-        <th class="col-md-1" scope="col">번호</th>
-        <th class="col-md-7" scope="col">제목</th>
-        <th scope="col">작성자</th>
-        <th scope="col">작성일</th>
-        <th scope="col">조회수</th>
-      </tr>
-    </thead>
-    <tbody action="#" method="GET">
-      {% for notice in notice_list %}
-      <tr class="board_datum">
-        <th scope="row">{{notice.pk}}</th>
-        <td>
-          <a href="{% url 'boardapp:notice_detail' pk=notice.pk%}">
-            {{notice.title}}
-          </a>
-        </td>
-        <td>{{notice.author.username}}</td>
-        <td>{{notice.created}}</td>
-        <td>{{notice.hit}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+  <section class="notice_search mt-5">
+    <form action="{% url 'boardapp:notice_list' %}" , method="GET" class="row justify-content-between">
+      <div class="notice_search_inp">
+        <input type="text" name="search" placeholder="검색어를 입력해주세요." />
+
+        
+          <!-- <input type="submit" value="검색" /> -->
+      </div>
+      
+      <div class="notice_search_sort">
+        <select class="form-control" name="sort">
+          <option value="">순서</option>
+          <option value="1">등록순</option>
+          <option value="2">조회순</option>
+        </select>
+      </div>
+    </form>
+  </section>
+
+  <section class="notice_table">
+    <table class="table table-striped table-hover table-sm">
+      <thead>
+        <tr>
+          <th class="col-md-1" scope="col">번호</th>
+          <th class="col-md-7" scope="col">제목</th>
+          <th scope="col">작성자</th>
+          <th scope="col">작성일</th>
+          <th scope="col">조회수</th>
+        </tr>
+      </thead>
+      <tbody action="#" method="GET">
+        {% for notice in notice_list %}
+        <tr class="board_datum">
+          <th scope="row">{{notice.pk}}</th>
+          <td>
+            <a href="{% url 'boardapp:notice_detail' pk=notice.pk%}">
+              {{notice.title}}
+            </a>
+          </td>
+          <td>{{notice.author.username}}</td>
+          <td>{{notice.created}}</td>
+          <td>{{notice.hit}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
 </div>
 
 {% include 'snippets/pagination.html' with page_obj=page_obj %}
