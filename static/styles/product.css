@@ -191,17 +191,17 @@
     margin-bottom: 1.125rem;
 }
 
-
-
 .product_list3_box img{
     width: 29rem;
 }
 
 .product_list3_box2{
-    
     padding: 1.5rem;
 
-    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .product_list3_img{
@@ -217,12 +217,16 @@
     font-size: 1.75rem;
 }
 
+/* .product_list3_box2_content{
+    margin-bottom: 5rem;
+} */
+
 .product_list3_box3{
     width: 25rem;
     height: 10rem;
-    background-color: rgb(255, 174, 0, 0.5);
+    background-color: rgba(255, 196, 68);
     border-radius: 0 5rem;
-    
+    margin-left: 16rem;
     
 }
 
