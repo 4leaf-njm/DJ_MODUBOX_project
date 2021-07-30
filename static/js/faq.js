@@ -34,7 +34,7 @@ const faq_click_handler = (e) => {
     answer_node.style.display = "none";
   } else {
     question_node.classList.add("active");
-    answer_node.style.display = "block";
+    answer_node.style.display = "flex";
   }
 };
 
