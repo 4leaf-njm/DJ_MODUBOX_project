@@ -33,8 +33,16 @@
 #sub_banner_tab_list li a {
   padding: 0.5rem;
   transition: 0.4s;
+
+  text-decoration: none;
+  color : var(--light-black);
 }
 
 #sub_banner_tab_list li a:hover {
   color : var(--theme);
+}
+
+#sub_banner_tab_list li .active{
+  color : var(--theme);
+  border-bottom: 2px solid var(--theme);
 }

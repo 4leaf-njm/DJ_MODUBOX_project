@@ -284,11 +284,28 @@
   justify-content: center;
 }
 
-.mobile_menuBox__join div {
+.mobile_menuBox__join div:nth-child(1) {
   width: 11rem;
   height: 3rem;
   background-color: var(--theme);
   border-radius: 2rem;
+  box-shadow: 1px 1px 3px var(--gray);
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile_menuBox__join div:nth-child(2) {
+  width: 11rem;
+  height: 3rem;
+  border: 1px solid var(--theme);
+  border-radius: 2rem;
+  color: var(--theme) !important;
   box-shadow: 1px 1px 3px var(--gray);
   color: var(--white);
   font-size: 1.2rem;
