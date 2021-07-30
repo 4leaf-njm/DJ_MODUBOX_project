@@ -100,6 +100,18 @@ class HomeView(CustomListView):
 
     client_ip = "000.***.*.***"
     client_platform = "MAC"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        slide_image_list = [
+            "https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FMAINBANNER%2FMAIN_BANNER_01.png?alt=media&token=530cce66-12e9-4aed-8268-1582b991ff79",
+            "https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FMAINBANNER%2FMAIN_BANNER_02.png?alt=media&token=09139a15-2498-4822-a7ca-0e6c4d92663c",   
+        ]
+        
+        context["slide_image_list"] = slide_image_list
+        return context
+        
 
     try:
         # accept_report_transaction(client_ip, client_platform)

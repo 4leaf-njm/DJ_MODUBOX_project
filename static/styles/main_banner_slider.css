@@ -1,0 +1,12 @@
+.carousel-inner {
+    height: 30rem !important;
+}
+
+.carousel-indicators li {
+    width : 0.625rem !important;
+    height: 0.625rem !important;
+    border-radius: 100%;
+    margin: 0 0.4rem;
+    cursor: pointer;
+}
+
