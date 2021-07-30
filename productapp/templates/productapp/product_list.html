@@ -218,7 +218,30 @@
 
 {% elif request.path == "/product/intro/3" %}
 
-  <h1>행택이얌</h1>
+<section class="container product_list Box">
+  {% for product in product_list %}
+    <div class="product_list_box hang">
+
+      <div class="product_list3_box">
+        {% for image in product.images.all %}
+          <div class="product_list3_box">
+            <img width="100%" src={{image.image_url.url}} alt="aaa"/>
+          </div>
+          {% endfor %}
+      </div>     
+
+      <div class="product_list3_box2">
+        
+
+
+        <h2 class="product_list3_box_title" name="{{product.title}}">{{product.title}}</h2>
+        <p class="product_list3_box_content">
+          {{product.content | safe}}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</section>
 
 
 {% else %}
