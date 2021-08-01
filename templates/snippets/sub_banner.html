@@ -1,6 +1,8 @@
 <section class="sub_banner">
   <img src="{{img_source}}" alt="subBanner" />
-
+  
+  <h4  class="sub_banner_title">{{title}}</h4>
+  <p class="sub_banner_content"> {{content}}</p>
 
 
   {% if menu %}
@@ -36,7 +38,7 @@
         a_tag.href = in_menu.link
 
         if (current_url.indexOf(in_menu.link) !== -1) {
-          a_tag.classList.add("active")
+          li_tag.classList.add("active")
         }
 
         li_tag.appendChild(a_tag);

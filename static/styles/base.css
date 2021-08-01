@@ -80,10 +80,13 @@ li {
 
 a {
   text-decoration: none !important;
+  color : var(--black);
+
 }
 
 a:hover {
   text-decoration: none !important;
+  color : var(--theme);
 }
 
 @media screen and (max-width: 500px) {
@@ -97,5 +100,14 @@ a:hover {
 
   .design_box_1 {
     font-size: 0.8rem;
+  }
+}
+
+
+
+
+@media (min-width: 1200px){
+  .container {
+      max-width: 1320px !important;
   }
 }

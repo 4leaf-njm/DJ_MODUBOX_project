@@ -25,6 +25,7 @@ const menu_list = [
 ];
 
 const menu_nav = document.getElementById("menu_nav");
+const mobile_menu_nav = document.getElementById("mobile_menuBox_bottom-js")
 
 menu_list.map((menu ,idx) => {
   const li_tag = document.createElement("li");
@@ -34,18 +35,45 @@ menu_list.map((menu ,idx) => {
   const div_tag = document.createElement("div");
   div_tag.className = "subMenuBox";
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+  // MOBILE
+  const li_tag2 = document.createElement("li");
+  li_tag2.className = "";
+  li_tag2.innerText = menu.name;
+
+  // MOBILE
+  const div_tag2 = document.createElement("div");
+  div_tag2.className = "subMenuBox";
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   menu.sub_menu.map((sub) => {
     const a_tag = document.createElement("a");
     a_tag.className = "subMenuBox__menu";
     a_tag.href = sub.link;
     a_tag.innerText = sub.name;
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+    // MOBILE
+    const a_tag2 = document.createElement("a");
+    a_tag2.className = "subMenuBox__menu";
+    a_tag2.href = sub.link;
+    a_tag2.innerText = sub.name;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     div_tag.appendChild(a_tag);
+    div_tag2.appendChild(a_tag2);
   });
 
   li_tag.appendChild(div_tag);
+  li_tag2.appendChild(div_tag2);
 
   menu_nav.appendChild(li_tag);
+  mobile_menu_nav.appendChild(li_tag2);
 
 
   if(idx === menu_list.length - 1) {
@@ -55,17 +83,51 @@ menu_list.map((menu ,idx) => {
     a_tag.href = "#";
     a_tag.innerText = "겔러리";
 
+    const li_tag2 = document.createElement("li");
+    const a_tag2 = document.createElement("a");
+    a_tag2.className = "subMenuBox__menu";
+    a_tag2.href = "#";
+    a_tag2.innerText = "겔러리";
+
     li_tag.appendChild(a_tag);
     menu_nav.appendChild(li_tag);
+
+    li_tag2.appendChild(a_tag2);
+    mobile_menu_nav.appendChild(li_tag2);
   }
 });
 
 
+const mobile_menu_list = Array.from(mobile_menu_nav.childNodes)
+
+mobile_menu_list.map((menu, idx) => {
+
+  if(idx !== 0) {
+    menu.classList.add("mobile_menu_list_of_one")
+  }
+})
+
+const after_mobile_menu_list = Array.from(document.getElementsByClassName("mobile_menu_list_of_one"))
 
 
+const mobile_menu_lv1_click_handler = (e) => {
+  
+  const open_lv2_menu = e.target.children[0]
+  const current_height = Array.from(open_lv2_menu.children).length * 55;
 
+  if(open_lv2_menu.style.display === "" || open_lv2_menu.style.display === "none") {
+    open_lv2_menu.style.display = "block";
+    e.target.style.height = `${current_height}px`;
+    
+  } else {
+    open_lv2_menu.style.display = "none";
+    e.target.style.height = `38px`;
+  }
+}
 
-
+after_mobile_menu_list.map(data=> {
+  data.addEventListener('click', mobile_menu_lv1_click_handler);
+})
 
 // Action Controller
 const toggleMobileHeader = (flag) => {
