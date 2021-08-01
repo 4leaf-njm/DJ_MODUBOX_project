@@ -155,8 +155,7 @@
 }
 
 .order_botton a:hover {
-  color: #fff;
-  z-index: 10;
+  color: var(--white);
 }
 
 .order_botton a:before {
@@ -167,12 +166,12 @@
   width: 0;
   height: 100%;
   background-color: var(--theme);
+  z-index: -1;
 }
 
 .order_botton a:hover:before {
-  width: 500px;
+  width: 100%;
   transition: all 1s;
-  color : var(--white);
 }
 
 @media screen and (max-width:900px){
