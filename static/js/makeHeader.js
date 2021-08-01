@@ -35,19 +35,45 @@ menu_list.map((menu ,idx) => {
   const div_tag = document.createElement("div");
   div_tag.className = "subMenuBox";
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+  // MOBILE
+  const li_tag2 = document.createElement("li");
+  li_tag2.className = "";
+  li_tag2.innerText = menu.name;
+
+  // MOBILE
+  const div_tag2 = document.createElement("div");
+  div_tag2.className = "subMenuBox";
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
   menu.sub_menu.map((sub) => {
     const a_tag = document.createElement("a");
     a_tag.className = "subMenuBox__menu";
     a_tag.href = sub.link;
     a_tag.innerText = sub.name;
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////// 
+
+    // MOBILE
+    const a_tag2 = document.createElement("a");
+    a_tag2.className = "subMenuBox__menu";
+    a_tag2.href = sub.link;
+    a_tag2.innerText = sub.name;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     div_tag.appendChild(a_tag);
+    div_tag2.appendChild(a_tag2);
   });
 
   li_tag.appendChild(div_tag);
+  li_tag2.appendChild(div_tag2);
 
   menu_nav.appendChild(li_tag);
-  mobile_menu_nav.appendChild(li_tag);
+  mobile_menu_nav.appendChild(li_tag2);
 
 
   if(idx === menu_list.length - 1) {
@@ -57,9 +83,17 @@ menu_list.map((menu ,idx) => {
     a_tag.href = "#";
     a_tag.innerText = "겔러리";
 
+    const li_tag2 = document.createElement("li");
+    const a_tag2 = document.createElement("a");
+    a_tag2.className = "subMenuBox__menu";
+    a_tag2.href = "#";
+    a_tag2.innerText = "겔러리";
+
     li_tag.appendChild(a_tag);
     menu_nav.appendChild(li_tag);
-    mobile_menu_nav.appendChild(li_tag);
+
+    li_tag2.appendChild(a_tag2);
+    mobile_menu_nav.appendChild(li_tag2);
   }
 });
 
