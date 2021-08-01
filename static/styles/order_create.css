@@ -110,6 +110,22 @@
   margin: 1rem 0;
 }
 
+.order_lineBottom {
+  margin-top: 5rem;
+  border-bottom: 0.3rem solid var(--theme);
+  position: relative;
+}
+
+.order_lineBottom:before {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 100%;
+  height: 0.15rem;
+  background-color: var(--theme);
+}
+
 /* BOTTON */
 
 .order_botton {
@@ -136,6 +152,11 @@
 
   position: relative;
   overflow: hidden;
+}
+
+.order_botton a:hover {
+  color: #fff;
+  z-index: 10;
 }
 
 .order_botton a:before {
