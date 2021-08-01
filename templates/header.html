@@ -98,42 +98,18 @@
       >close</span>
   </div>
   <div class="mobile_menuBox__join"> 
-    <div >로그인</div>
-    <div>회원가입</div>
+    {% if user.is_authenticated %}
+      <a href="{% url 'userapp:mypage' pk=user.pk %}">마이페이지</a>
+      <a href="{% url 'userapp:logout' %}">로그아웃</a>
+    {% else %}
+      <a href="{% url 'userapp:login' %}">로그인</a>
+      <a href="{% url 'userapp:join' %}">회원가입</a>
+    {% endif %}
   </div>
 
-  <div class="mobile_menuBox_bottom">
-    <div class="mobile_menuBox_1">
-       <p>제품소개</p>
-       <span class="material-icons">expand_more</span>
-    </div>
-    <div class="mobile_subMenu">
-       <p>맞춤박스</p>
-       <p>쇼핑백</p>
-       <p>행택</p>
-       <p>갤러리</p>
-    </div>
-    <div class="mobile_menuBox_2">
-       <p>제작안내</p>
-       <span class="material-icons">expand_more</span>
-    </div>
-    <div class="mobile_subMenu">
-      <p>제작 & 디자인</p>
-      <p>주문 & 제작과정</p>
-   </div>
-    <div class="mobile_menuBox_3">
-       <p>고객지원</p>
-       <span class="material-icons">expand_more</span>
-    </div>
-    <div class="mobile_subMenu">
-      <p>공지사항</p>
-      <p>자주묻는 질문</p>
-      <p>상담 / 견적의뢰</p>
-   </div>
-    <div class="mobile_menuBox_4">
-       <p>갤러리</p>
-    </div>
-  </div>
+  <ul class="mobile_menuBox_bottom" id=mobile_menuBox_bottom-js>
+   
+  </ul>
 </div>
 
 <script src="{% static 'js/makeHeader.js' %}"></script>
