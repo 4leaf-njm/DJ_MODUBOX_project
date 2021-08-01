@@ -14,11 +14,12 @@
   <form action="{% url 'userapp:join' %}" method="POST">
     {% csrf_token %}
 
+    {% bootstrap_form form %}
     <!--  -->
     <!--  -->
     <!-- stop -->
-    <div class="form-group create_user_form_group1">
-      <div class="create_user_label_input_wrapper1">
+    <!-- <div class="form-group create_user_form_group1">
+    <div class="create_user_label_input_wrapper1">
       <label for="id_username" >아이디<span class="star">*</span></label
       >
       <div class="create_user_input_desc_wrapper">
@@ -278,7 +279,7 @@
 4. 경찰청 사이버테러대응센터 (www.netan.go.kr/1566-0112)
       </pre>
     </div>
-        
+         -->
 
 
     <input type="submit" value="회원가입" class="user_create_button" />
