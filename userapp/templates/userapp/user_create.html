@@ -14,11 +14,12 @@
   <form action="{% url 'userapp:join' %}" method="POST">
     {% csrf_token %}
 
+    {% bootstrap_form form %}
     <!--  -->
     <!--  -->
     <!-- stop -->
-    <div class="form-group create_user_form_group1">
-      <div class="create_user_label_input_wrapper1">
+    <!-- <div class="form-group create_user_form_group1">
+    <div class="create_user_label_input_wrapper1">
       <label for="id_username" >아이디<span class="star">*</span></label
       >
       <div class="create_user_input_desc_wrapper">
@@ -118,7 +119,7 @@
 
     <div class="user_create_policy1">
       <div class="user_create_policy_title1">
-        <input type="checkbox" class="user_create_checkbox" id="checkbox-1" /><label for="checkbox-1">이용약관에 동의합니다.</label>
+        <input type="checkbox" class="user_create_checkbox" id="checkbox-1" /><label for="checkbox-1" class="mb-0">이용약관에 동의합니다.</label>
       </div>
       <div class="user_create_policy">
       <pre>[이용약관]
@@ -230,7 +231,7 @@
     </div>
     <div class="user_create_policy2">
       <div class="user_create_policy_title2">
-        <input type="checkbox" class="user_create_checkbox" id="checkbox-2" /><label for="checkbox-2">개인정보 수집 및 이용안내에 동의합니다.</label>
+        <input type="checkbox" class="user_create_checkbox" id="checkbox-2" /><label for="checkbox-2" class="mb-0">개인정보 수집 및 이용안내에 동의합니다.</label>
       </div>
       <div class="user_create_policy">
       <pre>[개인정보 처리방침]
@@ -278,7 +279,7 @@
 4. 경찰청 사이버테러대응센터 (www.netan.go.kr/1566-0112)
       </pre>
     </div>
-        
+         -->
 
 
     <input type="submit" value="회원가입" class="user_create_button" />

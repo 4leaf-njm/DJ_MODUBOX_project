@@ -28,3 +28,12 @@ class UserMypageView(CustomUpdateView) :
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("core:home")
     template_name = "userapp/mypage.html"
+
+@method_decorator(has_ownwership, 'get')
+@method_decorator(has_ownwership, 'post')
+class UserFindView(CustomUpdateView) :
+    model = User
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy("core:home")
+    template_name = "userapp/find.html"
+
