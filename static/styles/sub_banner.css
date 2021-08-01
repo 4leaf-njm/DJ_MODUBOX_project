@@ -13,7 +13,7 @@
 .sub_banner .sub_banner_tab {
   width: 100%;
   height: 4rem;
-  background-color: var(--light-gray);
+  border-bottom: 1px solid #E8E8E8;
 }
 
 .sub_banner .sub_banner_tab ul {
@@ -29,23 +29,63 @@
 }
 
 
-#sub_banner_tab_list li {
-  margin : 0 1rem;
+.sub_banner .sub_banner_tab ul li  {
+  height: 100%;
+  width : 10rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: relative;
 }
 
-#sub_banner_tab_list li a {
-  padding: 0.5rem;
-  transition: 0.4s;
-
-  text-decoration: none;
-  color : var(--light-black);
+.sub_banner .sub_banner_tab ul li.active a{
+  color : var(--theme);  
+  font-weight: 700;
 }
 
-#sub_banner_tab_list li a:hover {
-  color : var(--theme);
+.sub_banner .sub_banner_tab ul li a {
+  width : 100%;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-#sub_banner_tab_list li .active{
-  color : var(--theme);
+.sub_banner .sub_banner_tab ul li:not(:last-child) a{
+  border-right: 1px solid #E8E8E8;
+}
+
+
+
+@keyframes hoverFullWidthAni {
+ 
+  0% {
+    width : 0%
+  }
+
+  100% {
+    width : 100%;
+  }
+}
+
+.sub_banner .sub_banner_tab ul li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom : 0;
+  width : 0%;
   border-bottom: 2px solid var(--theme);
+}
+
+
+
+.sub_banner .sub_banner_tab ul li:hover:before{
+  animation: hoverFullWidthAni 0.4s forwards;
+}
+
+
+.sub_banner .sub_banner_tab ul li.active:before {
+  animation: hoverFullWidthAni 0.4s forwards;
 }
