@@ -49,6 +49,8 @@
   margin-bottom: 5rem;
 }
 
+
+
 .board_detail__buttonArea {
   display: flex;
   flex-direction: row;
@@ -72,6 +74,11 @@
   background-color: var(--theme);
 }
 
-
+@media screen and (max-width:1100px) {
+  .board_detail__content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 
 
