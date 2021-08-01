@@ -72,6 +72,8 @@ button {
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  color: rgb(201, 201, 201);
+  font-size: 0.9rem;
 }
 
 li {
@@ -87,6 +89,20 @@ a {
 a:hover {
   text-decoration: none !important;
   color : var(--theme);
+}
+
+@media screen and (max-width: 700px) {
+  .orderCreate .form-group {
+    padding: 0 1rem 1rem ;
+    margin: 1rem 0 0;
+  }
+
+  .orderCreate .form-group > input,
+  .orderCreate .form-group > select,
+  .orderCreate .form-group > textarea {
+    width: 20rem;
+}
+
 }
 
 @media screen and (max-width: 500px) {
