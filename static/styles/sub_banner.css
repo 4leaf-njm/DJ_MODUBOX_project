@@ -42,6 +42,23 @@
   position: relative;
 }
 
+.sub_banner .sub_banner_title,
+.sub_banner .sub_banner_content {
+  position: absolute;
+  color: var(--white);
+  text-shadow: 2px 2px 1px var(--black);
+}
+
+.sub_banner .sub_banner_title {
+  top : 7rem;
+  left : 10rem;
+}
+
+.sub_banner .sub_banner_content{
+  top : 10rem;
+  left : 10rem;
+}
+
 .sub_banner .sub_banner_tab ul li.active a{
   color : var(--theme);  
   font-weight: 700;
