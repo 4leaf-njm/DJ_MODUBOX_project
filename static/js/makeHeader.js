@@ -25,6 +25,7 @@ const menu_list = [
 ];
 
 const menu_nav = document.getElementById("menu_nav");
+const mobile_menu_nav = document.getElementById("mobile_menuBox_bottom-js")
 
 menu_list.map((menu ,idx) => {
   const li_tag = document.createElement("li");
@@ -46,6 +47,7 @@ menu_list.map((menu ,idx) => {
   li_tag.appendChild(div_tag);
 
   menu_nav.appendChild(li_tag);
+  mobile_menu_nav.appendChild(li_tag);
 
 
   if(idx === menu_list.length - 1) {
@@ -57,15 +59,41 @@ menu_list.map((menu ,idx) => {
 
     li_tag.appendChild(a_tag);
     menu_nav.appendChild(li_tag);
+    mobile_menu_nav.appendChild(li_tag);
   }
 });
 
 
+const mobile_menu_list = Array.from(mobile_menu_nav.childNodes)
+
+mobile_menu_list.map((menu, idx) => {
+
+  if(idx !== 0) {
+    menu.classList.add("mobile_menu_list_of_one")
+  }
+})
+
+const after_mobile_menu_list = Array.from(document.getElementsByClassName("mobile_menu_list_of_one"))
 
 
+const mobile_menu_lv1_click_handler = (e) => {
+  
+  const open_lv2_menu = e.target.children[0]
+  const current_height = Array.from(open_lv2_menu.children).length * 55;
 
+  if(open_lv2_menu.style.display === "" || open_lv2_menu.style.display === "none") {
+    open_lv2_menu.style.display = "block";
+    e.target.style.height = `${current_height}px`;
+    
+  } else {
+    open_lv2_menu.style.display = "none";
+    e.target.style.height = `38px`;
+  }
+}
 
-
+after_mobile_menu_list.map(data=> {
+  data.addEventListener('click', mobile_menu_lv1_click_handler);
+})
 
 // Action Controller
 const toggleMobileHeader = (flag) => {
