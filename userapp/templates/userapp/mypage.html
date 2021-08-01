@@ -6,19 +6,39 @@
 {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB.png?alt=media&token=a4a0e055-53b7-44a0-a266-f549a1827e84" %}
 
 <section class="container">
+
+
+  
   <div class="user_create_box">
     <div class="user_create_title_wrapper">
       <h2>내정보수정</h2>
       <span class="user_create_subtitle"><span class="user_create_subtitle_y">모두박스</span> 회원님의 정보를 확인하세요.</span>
     </div>
   
-  <form action="{% url 'userapp:join' %}" method="POST">
+  <form action="{% url 'userapp:mypage' pk=user.pk %}" method="POST">
     {% csrf_token %}
 
+
+    <div class="form-group"><label for="id_username">사용자 이름</label><input type="text" name="username" value="system" maxlength="150" autofocus class="form-control" placeholder="사용자 이름" title="150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다." required id="id_username">
+    <small class="form-text text-muted">150자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다.</small>
+
+</div>
+<div class="form-group"><label for="id_name">사용자명</label><input type="text" name="name" value="4LEAF" maxlength="12" class="form-control" placeholder="사용자명" title="" required id="id_name"></div>
+<div class="form-group"><label for="id_password1">비밀번호</label><input type="password" name="password1" autocomplete="new-password" class="form-control" placeholder="비밀번호" title="다른 개인 정보와 유사한 비밀번호는 사용할 수 없습니다.비밀번호는 최소 8자 이상이어야 합니다.통상적으로 자주 사용되는 비밀번호는 사용할 수 없습니다.숫자로만 이루어진 비밀번호는 사용할 수 없습니다." required id="id_password1">
+    <small class="form-text text-muted"><ul><li>다른 개인 정보와 유사한 비밀번호는 사용할 수 없습니다.</li><li>비밀번호는 최소 8자 이상이어야 합니다.</li><li>통상적으로 자주 사용되는 비밀번호는 사용할 수 없습니다.</li><li>숫자로만 이루어진 비밀번호는 사용할 수 없습니다.</li></ul></small>
+
+</div>
+<div class="form-group"><label for="id_password2">비밀번호 확인</label><input type="password" name="password2" autocomplete="new-password" class="form-control" placeholder="비밀번호 확인" title="확인을 위해 이전과 동일한 비밀번호를 입력하세요. " required id="id_password2">
+    <small class="form-text text-muted">확인을 위해 이전과 동일한 비밀번호를 입력하세요. </small>
+
+</div>
+<div class="form-group"><label for="id_email">이메일 주소</label><input type="email" name="email" value="{{user.email}}" maxlength="254" class="form-control" placeholder="이메일 주소" title="" id="id_email"></div>
+    <!--  -->
+    <!--  -->
     <!--  -->
     <!--  -->
     <!-- stop -->
-    <div class="form-group create_user_form_group1">
+    <!-- <div class="form-group create_user_form_group1">
       <div class="create_user_label_input_wrapper1">
       <label for="id_username" >아이디<span class="star">*</span></label
       >
@@ -34,6 +54,7 @@
         required
         id="id_username"
         readonly
+        value="{{ user.username }}"
       />
       <small class="form-text text-muted user_create_input_desc">
         15자 이하 문자, 숫자 그리고 @/./+/-/_만 가능합니다.
@@ -53,6 +74,7 @@
         placeholder="이름을 입력해주세요."
         title=""
         required
+        value="{{user.name}}"
         id="id_name"
       />
     </div>
@@ -68,10 +90,11 @@
         class="form-control"
         placeholder="이메일 주소"
         title=""
+        value="{{ user.email }}"
         id="id_email"
       />
       </div>
-    </div>
+    </div> -->
 
     <input type="submit" value="정보수정" class="user_create_button" />
   </form>
