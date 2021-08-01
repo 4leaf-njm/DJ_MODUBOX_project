@@ -3,9 +3,9 @@
   font-weight: 700;
 }
 
-.faq .faq_desc {
+/* .faq .faq_desc {
   font-size: 0.9375rem;
-}
+} */
 
 .faq .faq_desc > span {
   color: var(--theme);
@@ -101,4 +101,12 @@
   margin-right: 2rem;
   width: auto;
   font-weight: 900;
+}
+
+@media screen and (max-width: 700px) {
+  .faq {
+    padding: 0 1rem;
+  }
+
+
 }
