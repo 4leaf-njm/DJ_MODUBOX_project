@@ -1,9 +1,14 @@
 <section class="sub_banner">
-  <img src="{{img_source}}" alt="subBanner" />
-  
-  <h4  class="sub_banner_title">{{title}}</h4>
-  <p class="sub_banner_content"> {{content}}</p>
+  <div class="sub_banner_Box">
+    <img src="{{img_source}}" alt="subBanner" />
 
+    <div class="sub_banner_txtBox">
+      <div>
+        <img src="{{title}}" class="sub_banner_title"/>
+      </div>
+      <p class="sub_banner_content">{{content}}</p>
+  </div>
+  </div>
 
   {% if menu %}
 
