@@ -49,7 +49,7 @@ button {
   align-items: center;
   justify-content: flex-start;
   margin: 2rem 0 0;
-  border-bottom: 0.1rem solid var(--gray);
+  border-bottom: 0.1rem solid var(--light-gray2);
   padding: 0 3rem 2rem;
 }
 
