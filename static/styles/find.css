@@ -1,107 +1,106 @@
-.notice .notice_title {
-  font-size: 1.25rem;
+.find {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find .find_title {
+  font-size: 2rem;
   font-weight: 700;
 }
 
-.notice .notice_desc {
-  font-size: 0.9375rem;
-}
-
-.notice .notice_desc > span {
+.find .find_desc > span {
   color: var(--theme);
 }
 
-.notice .notice_search {
-  margin-bottom: 1.875rem;
-}
-
-.notice .notice_search_inp {
-  width: 14.375rem;
-  height: 2rem;
-  border: 1px solid #beb9b9;
-  border-radius: 6px;
-  box-shadow: 2px 2px 4px #c7c7c7;
-}
-
-.notice .notice_search_inp > input {
+.find .find_box {
+  display: flex;
+  justify-content: space-around;
   width: 100%;
-  height: 100%;
-  font-size: 0.9375rem;
+}
+
+.find .find_id, 
+.find .find_pw {
+  margin: 3rem 0 0;
+  width: 46%;
+  padding: 2rem;
+  border-radius: 2.9375rem;
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem; 
+}
+
+.find .find_id_confirm,
+.find .find_pw_certification {
+  margin: 3rem 0 0;
+  width: 70%;
+  padding: 2rem;
+  border-radius: 2.9375rem;
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem; 
+}
+
+.find .find_subTitle {
+  font-size: 1.5625rem;
+  margin: 0 0 2rem 0;
+}
+
+.find .find_input_wrapper {
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.find .find_input_wrapper > label {
+  font-size: 1rem;
+  text-align: right;
+}
+
+.find .find_input_wrapper > input {
+  width: 25rem;
+  font-size: 0.9rem;
   border: none;
   outline: none;
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 0.5rem !important;
 }
 
-.notice .notice_search_sort {
-  width: 11rem;
-  height: 2rem;
-  border: 1px solid #beb9b9;
-  border-radius: 0.4rem;
-  box-shadow: 2px 2px 4px #c7c7c7;
+.find .find_button_group {
+  display: flex;
+  justify-content: center;
 }
 
-.notice .notice_search_sort > select {
-  width: 100%;
-  height: 100%;
-  text-align-last: center;
-  text-align: center;
-  -ms-text-align-last: center;
-  -moz-text-align-last: center;
+.find .find_button {
+  width: 13.75rem;
+  height: 2.5rem;
+  margin: 2rem 0.5rem 1rem;
+  background-color: #fbac25;
+  color: #fff;
   border: none;
-  box-shadow: none;
-  outline: none;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 0.5rem;
 }
 
-.notice .notice_table {
-  padding: 0 0 4rem;
-  margin: 0 0 3rem;
-  height: 53.4375rem;
-  border-bottom: 1px solid #dedede;
-}
-
-.notice .notice_table thead th {
-  position: relative;
-  border-top: 1px solid #cfcfcf;
-  border-bottom: 1px solid #d1d1d1 !important;
-  padding: 0.625rem 0;
-  font-size: 0.875rem;
-  font-weight: 700;
-}
-
-.notice .notice_table thead th:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -0.5rem;
-  width: 0.1rem;
-  height: 1rem;
-  background: #868585;
-}
-
-.notice .notice_table thead th:last-child:after {
-  display: none;
-}
-
-.notice .notice_table tbody tr:nth-child(2n - 1) {
-  background: var(--light-theme);
-}
-
-.notice .notice_table tbody tr {
-  box-shadow: 2px 2px 4px #bebebe;
-}
-
-.notice .notice_table tbody th,
-.notice .notice_table tbody td {
-  padding: 0.5rem 0.3rem;
-  font-size: 0.875rem;
+.find .find_button_white {
+  width: 13.75rem;
+  height: 2.5rem;
+  margin: 2rem 0.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid #fbac25;
+  color: #333;
   border: none;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 0.5rem;
 }
 
-.notice .notice_table tbody a {
-  text-decoration: none;
-  color: inherit;
-  transition: 0.2s;
-  width: 100%;
-  height: 100%;
-  display: block;
+.find .find_text {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.find .find_text span {
+  color: var(--theme);
+}
+
+.find .find_pw_certification .inp_secretCode {
+  width: 50%;
 }

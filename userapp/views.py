@@ -33,3 +33,13 @@ class UserMypageView(CustomUpdateView) :
 class UserFindView(CustomTemplateView) :
     template_name = "userapp/find.html"
 
+class UserFindIdConfirmView(CustomTemplateView) :
+    template_name = "userapp/find_id_confirm.html"
+
+class UserFindPwCertificationView(CustomTemplateView) :
+    template_name = "userapp/find_pw_certification.html"
+
+class UserFindPwChangeView(CustomTemplateView) :
+    template_name = "userapp/find_pw_change.html"
+
+
