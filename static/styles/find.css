@@ -101,6 +101,19 @@
   color: var(--theme);
 }
 
+.find .find_pw_certification form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .find .find_pw_certification .inp_secretCode {
-  width: 50%;
+  width: 40%;
+  outline: none;
+}
+
+.find .find_pw_certification .inp_text {
+  margin: 0.8rem 0 0 0;
+  font-size: 1rem;
+  color: #4d4a4a;
 }
