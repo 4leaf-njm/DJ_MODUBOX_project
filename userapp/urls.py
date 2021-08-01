@@ -9,5 +9,5 @@ urlpatterns = [
     path("join/", UserCreateView.as_view(), name="join"),
     path("logout/", LogoutView.as_view(), name="logout"),
     path("mypage/<int:pk>", UserMypageView.as_view(), name="mypage"),
-    path("find/", UserFindView.as_view(), name="find"),
+    path("infofind/", UserFindView.as_view(), name="userfind"),
 ]
