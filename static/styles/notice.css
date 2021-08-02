@@ -136,16 +136,32 @@
 
   .notice .mobile_notice_table .mobile_table .mobile_title {
     width: 100%;
-   
+    border-bottom: 1px solid var(--light-gray2);
+    padding-bottom: 0.5rem;
   }
 
   .mobile_notice_table .mobile_table thead .mobile_title > th {
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--light-gray2);
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   .notice .mobile_notice_table .mobile_table .mobile_list {
     padding-top: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .notice .mobile_notice_table .mobile_table .mobile_list th {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
   }
 
+  .notice .mobile_notice_table .mobile_table .mobile_list span {
+    margin: -0.2rem 0.5rem 0 0;
+    color: var(--light-black);
+  }
 }
