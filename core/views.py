@@ -127,3 +127,7 @@ class DesignView(CustomTemplateView):
 
 class ProcessingView(CustomTemplateView):
     template_name = "core/processing.html"
+
+
+class GallaryView(CustomTemplateView):
+    template_name = "core/gallary.html"
