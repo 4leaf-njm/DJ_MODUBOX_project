@@ -7,6 +7,7 @@ class User(AbstractUser):
 
     name = models.CharField("사용자명", max_length=12, null=True)
     mobile = models.CharField("핸드폰번호", max_length=12, null=True)
+    # secretCode = models.CharField("인증번호", max_length=6, null=True)
 
     agreement1 = models.BooleanField("개인정보처리방침 동의", default=False)
     agreement2 = models.BooleanField("이용약관 동의", default=False)
