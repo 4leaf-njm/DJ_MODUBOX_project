@@ -81,13 +81,13 @@ menu_list.map((menu ,idx) => {
     const a_tag = document.createElement("a");
     a_tag.className = "subMenuBox__menu";
     a_tag.href = "#";
-    a_tag.innerText = "겔러리";
+    a_tag.innerText = "갤러리";
 
     const li_tag2 = document.createElement("li");
     const a_tag2 = document.createElement("a");
     a_tag2.className = "subMenuBox__menu";
     a_tag2.href = "#";
-    a_tag2.innerText = "겔러리";
+    a_tag2.innerText = "갤러리";
 
     li_tag.appendChild(a_tag);
     menu_nav.appendChild(li_tag);
