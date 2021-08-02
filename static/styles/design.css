@@ -192,6 +192,10 @@
 }
 
 @media screen and (max-width: 500px) {
+    .design_outBox {
+      padding: 0 1rem;
+    }
+  
     .design_box_2 .design_box_2_right {
     font-size: 0.9rem;
     }
