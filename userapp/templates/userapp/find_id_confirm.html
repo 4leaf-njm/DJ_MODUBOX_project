@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load bootstrap4 %}
+<!--  -->
+
+{% block content %} 
+{% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%8B%E1%85%B5%E1%86%AB.png?alt=media&token=a4a0e055-53b7-44a0-a266-f549a1827e84" %}
+
+data : {{ user.username }}
+<section class="container text-center find">
+  <h3 class="find_title">아이디 찾기</h3>
+  <article class="find_desc">
+    <span>모두박스</span> 회원님의 아이디/비밀번호를 찾아보세요.
+  </article>
+
+  <div class="find_id_confirm">
+    <div class="find_subTitle">아이디 검색결과</div>
+
+    <div class="find_text">
+      회원님이 찾으시는 아이디는 <span>sys***</span> 입니다.
+    </div>
+
+    <div class="find_button_group">
+      <input type="button" value="로그인" class="find_button_white" />
+      <input type="button" value="이전으로" class="find_button" />
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

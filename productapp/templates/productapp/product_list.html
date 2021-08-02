@@ -4,13 +4,13 @@
 {% block content %}
 
 {% if request.path == "/product/intro/1" %}
-  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%86%E1%85%A1%E1%86%BD%E1%84%8E%E1%85%AE%E1%86%B7%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3.png?alt=media&token=67aeb068-c655-451c-829e-06b73ec22b1c" menu="제품소개" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%86%E1%85%A1%E1%86%BD%E1%84%8E%E1%85%AE%E1%86%B7%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%B3.png?alt=media&token=67aeb068-c655-451c-829e-06b73ec22b1c" menu="제품소개" title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F%E1%84%80%E1%85%B3%E1%84%85%E1%85%AE%E1%86%B8%2074.png?alt=media&token=54a4b9ec-a574-45f1-b8d5-eed6d3d49648" content="맞춤 박스" %}
 
 {% elif request.path == "/product/intro/2"%}
-  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=1559016b-6d76-472c-9ed5-e24f0e3ab6aa" menu="제품소개" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%89%E1%85%AD%E1%84%91%E1%85%B5%E1%86%BC%E1%84%87%E1%85%A2%E1%86%A8.png?alt=media&token=1559016b-6d76-472c-9ed5-e24f0e3ab6aa" menu="제품소개" title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F%E1%84%80%E1%85%B3%E1%84%85%E1%85%AE%E1%86%B8%20242.png?alt=media&token=dd2231bf-c15e-4bf6-a95b-ec2868aeeedf" content="쇼핑백" %}
 
 {% elif request.path == "/product/intro/3" %}
-  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=d8e01949-41b4-458c-823c-f5718182adb3" menu="제품소개" %}
+  {% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%92%E1%85%A2%E1%86%BC%E1%84%90%E1%85%A2%E1%86%A8.png?alt=media&token=d8e01949-41b4-458c-823c-f5718182adb3" menu="제품소개" title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F%E1%84%80%E1%85%B3%E1%84%85%E1%85%AE%E1%86%B8%20311.png?alt=media&token=adc6e3cf-abe7-4fc5-9f79-c060aa2ba90b" content="행택" %}
 {% endif %}
   
 
@@ -231,6 +231,8 @@
       </div>     
 
       <div class="product_list3_box2">
+
+        {% include 'snippets/hangTag_slider.html' with slide_image_list=slide_image_list %}
         <div class="product_list3_img">
           <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%A1%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=e5a9541c-8260-47bb-8ae3-37bcc470e78e" alt="aaa"/>
           <img width="100%" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%A1%E1%84%8E%E1%85%AE%E1%86%AF%E1%84%81%E1%85%B3%E1%86%AB-1.png?alt=media&token=e5a9541c-8260-47bb-8ae3-37bcc470e78e" alt="aaa"/>
@@ -242,13 +244,11 @@
         <p class="product_list3_box2_content">
           {{product.content | safe}}
         </p>
-
-        <div class="product_list3_box3">
-          <p>{{product.spec | safe}}</p>
-        </div>
       </div>
 
-      
+      <div class="product_list3_box3">
+        <p>{{product.spec | safe}}</p>
+      </div>
     </div>
   {% endfor %}
 </section>

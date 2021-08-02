@@ -49,9 +49,36 @@
   margin-bottom: 5rem;
 }
 
+
+
 .board_detail__buttonArea {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
 }
+
+.board_detail__buttonArea .btn-sm {
+  width: 8rem;
+  height: 2rem;
+  border:1px solid var(--theme);
+  background-color: var(--white);
+  color: var(--theme);
+
+  position: relative;
+  transition: 0.6s;
+}
+
+.board_detail__buttonArea .btn-sm:hover {
+  color: var(--white);
+  background-color: var(--theme);
+}
+
+@media screen and (max-width:1100px) {
+  .board_detail__content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+

@@ -82,10 +82,10 @@
 }
 
 .plbti .plbti_imagebox {
-  width: 15.25rem;
+  width: calc(100% / 4 - (12rem / 4));
   height: 15.25rem;
-  overflow: hidden;
   margin: 1.5rem;
+  overflow: hidden;
   border-radius: 0.225rem;
   transition: 0.6s;
 }
@@ -179,30 +179,28 @@
 }
 
 .product_list.Box{
-    padding: 2rem;
+    padding: 4rem;
 }
 
 .product_list_box.hang{
     padding: 2rem;
-
+    position: relative;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
   }
 
 .product_list3_box img{
-    width: 29rem;
+    width: 32rem;
 }
 
 .product_list3_box2{
     padding: 1.5rem;
-
+    
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
 }
 
 .product_list3_img{
@@ -228,8 +226,46 @@
     background-color: rgb(254, 218, 157);
     border-radius: 0 5rem;
     margin-left: 10.5rem;
-    
     padding: 2rem 4rem;
+    
+    position: absolute;
+    right: -2rem;
+    bottom: 3rem;
+}
+
+.product_list3_box3::before{
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSCREEN%2F%E1%84%89%E1%85%A1%E1%86%B7%E1%84%80%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A7%E1%86%BC.png?alt=media&token=cd3ed994-54ed-4fbd-87ca-8693e2a3e8f2");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+  .plbti .plbti_imagebox {
+    width: calc(100% / 4 - (8rem / 4));
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .plbti .plbti_imagebox {
+    width: calc(100% / 2 - (16rem / 2));
+    margin: 1rem 4rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .product_list2_box {
+    padding: 2.625rem 3rem;
+  }
 }
 
 @media screen and (max-width: 500px) { 
@@ -253,5 +289,10 @@
    
    .product_list2_box2_img{
        margin-bottom: 2rem;
+   }
+
+   .plbti .plbti_imagebox {
+     width: 100%;
+     height: 20rem;
    }
 }
