@@ -13,23 +13,23 @@ has_ownwership = [
 ]
 
 
-class UserCreateView(CustomCreateView) :
+class UserCreateView(CustomCreateView):
     model = User
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("core:home")
     template_name = "userapp/user_create.html"
-    
-    
-@method_decorator(has_ownwership, 'get')
-@method_decorator(has_ownwership, 'post')
-class UserMypageView(CustomUpdateView) :
+
+
+@method_decorator(has_ownwership, "get")
+@method_decorator(has_ownwership, "post")
+class UserMypageView(CustomUpdateView):
     model = User
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("core:home")
     template_name = "userapp/mypage.html"
 
 
-class UserFindView(CustomTemplateView) :
+class UserFindView(CustomTemplateView):
     template_name = "userapp/find.html"
 
     def post(self, request, *args, **kwargs):
@@ -38,42 +38,27 @@ class UserFindView(CustomTemplateView) :
         username = self.request.POST.get("username")
         email = self.request.POST.get("email")
 
-        
-
         if find_type == "1":
             users = User.objects.all().filter(name=name, email=email)
-            
-            print(users)
+            return redirect("userapp:find_id_confirm", id = users[0].username)
 
-            if(len(users) > 0):
-                ctx = {
-                    'user': users[0]
-                }
-                print(ctx.user)
-                return redirect('/user/find_id_confirm', ctx)
-            
-
-        
         elif find_type == "2":
             ctx = {
-                'find_type': find_type,
-                'name': name,
-                'username': username,
-                'email': email
+                "find_type": find_type,
+                "name": name,
+                "username": username,
+                "email": email,
             }
-            return redirect('/user/find_id_confirm', ctx)
+            return redirect("/user/find_id_confirm", ctx)
 
-        
 
-        
-
-class UserFindIdConfirmView(CustomTemplateView) :
+class UserFindIdConfirmView(CustomTemplateView):
     template_name = "userapp/find_id_confirm.html"
 
-class UserFindPwCertificationView(CustomTemplateView) :
+
+class UserFindPwCertificationView(CustomTemplateView):
     template_name = "userapp/find_pw_certification.html"
 
-class UserFindPwChangeView(CustomTemplateView) :
+
+class UserFindPwChangeView(CustomTemplateView):
     template_name = "userapp/find_pw_change.html"
-
-
