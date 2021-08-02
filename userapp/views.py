@@ -40,7 +40,7 @@ class UserFindView(CustomTemplateView):
 
         if find_type == "1":
             users = User.objects.all().filter(name=name, email=email)
-            return redirect("userapp:find_id_confirm", id = users[0].username)
+            return render(request, "userapp/find_id_confirm.html", {'id': users[0].username})
 
         elif find_type == "2":
             ctx = {
