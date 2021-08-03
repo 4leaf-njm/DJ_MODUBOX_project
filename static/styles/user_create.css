@@ -1,7 +1,7 @@
 .user_create_box {
   width: 100%;
   padding: 6.25rem 0 10rem;
-  border: 0.625rem solid #fbac25;
+  border: 0.625rem solid var(--theme);
   border-radius: 4rem;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .user_create_subtitle_y {
-  color: #fbac25;
+  color: var(--theme);
   font-size: 1rem;
 }
 
@@ -94,12 +94,19 @@
 .user_create_button {
   width: 38.75rem;
   height: 2.5rem;
-  background: #fbac25;
+  background: var(--theme);
   border: none;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
-  color: #fff;
+  color: var(--white);
   margin: 2.125rem 0 0 0;
+  transition: 0.7s;
+}
+
+.user_create_button:hover {
+  border: 1px solid var(--theme);
+  background-color: var(--white);
+  color: var(--theme);
 }
 
 .user_create_policy_title1,

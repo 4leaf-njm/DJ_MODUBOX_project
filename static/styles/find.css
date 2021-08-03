@@ -35,7 +35,7 @@
 .find .find_id_confirm,
 .find .find_pw_certification,
 .find .find_pw_none {
-  margin: 3rem 0 0;
+  margin: 5rem 0 0;
   width: 70%;
   padding: 2rem;
   border-radius: 2.9375rem;
@@ -84,6 +84,13 @@
   border: none;
   border-radius: 0.5rem;
   box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 0.5rem;
+  transition: 0.7s;
+}
+
+.find .find_button:hover {
+  border: 1px solid var(--theme);
+  background-color: var(--white);
+  color: var(--theme);
 }
 
 .find .find_button_white {
@@ -173,9 +180,21 @@
     width: 70%;
     padding: 3rem;
   }
+
+  .find .find_pw_certification .inp_secretCode,
+  .find .find_pw_certification .inp_password1,
+  .find .find_pw_certification .inp_password2 {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .find .find_id_confirm,
+  .find .find_pw_certification,
+  .find .find_pw_none {
+    width: 80%;
+  }
+
   .find .find_id,
   .find .find_pw {
     width: 90%;

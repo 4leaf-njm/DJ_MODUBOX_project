@@ -70,6 +70,13 @@
   border: none;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 0.5rem;
+  transition: 0.7s;
+}
+
+.login_area > input:hover {
+  border: 1px solid var(--theme);
+  background-color: var(--white);
+  color: var(--theme);
 }
 
 .login_input_wrapper1,
