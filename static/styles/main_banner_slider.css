@@ -10,3 +10,8 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:700px) {
+    .carousel-inner {
+        height: auto;
+    }
+}
