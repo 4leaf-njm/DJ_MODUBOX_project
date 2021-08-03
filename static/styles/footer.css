@@ -10,10 +10,6 @@ footer {
   display: none;
 }
 
-.footer_info {
-  padding-bottom: 4rem;
-}
-
 .footer_info h4 {
   color: var(--theme);
   margin-bottom: 1.5rem;
@@ -93,6 +89,10 @@ footer {
   }
 
   .footer_info {
+    padding-bottom: 2rem;
+  }
+
+  .footer_info:last-child {
     padding-bottom: 0;
   }
 
@@ -112,6 +112,7 @@ footer {
   .footer_info .footer_info_modubox_txt {
     width: 100%;
     margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     align-items: flex-start;
   }
