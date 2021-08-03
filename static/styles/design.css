@@ -147,6 +147,7 @@
 .design_desc {
   margin: 6rem 0;
   font-size : 1rem;
+  line-height: 2;
   animation: titleAnimation 1s forwards;
 }
 
