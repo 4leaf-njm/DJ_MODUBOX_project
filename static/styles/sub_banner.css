@@ -1,4 +1,3 @@
-
 .sub_banner {
   width: 100%;
   height: 24rem;
@@ -70,6 +69,7 @@
 
 .sub_banner .sub_banner_Box .sub_banner_txtBox .sub_banner_content{
   font-size: 3.75rem;
+  margin-top: 1rem;
 }
 
 .sub_banner .sub_banner_tab ul li.active a{
@@ -118,4 +118,18 @@
 
 .sub_banner .sub_banner_tab ul li.active:before {
   animation: hoverFullWidthAni 0.4s forwards;
+}
+
+@media screen and (max-width:900px) {
+  .sub_banner .sub_banner_Box .sub_banner_txtBox .sub_banner_content{
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .sub_banner .sub_banner_Box .sub_banner_txtBox .sub_banner_content{
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
 }
