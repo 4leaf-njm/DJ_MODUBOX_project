@@ -11,6 +11,7 @@ from django.core.mail import send_mail, EmailMessage
 from django.core import mail
 import string
 import random
+
 # settings.configure()
 
 has_ownwership = [
@@ -18,12 +19,14 @@ has_ownwership = [
     account_ownwership_required,
 ]
 
-def get_secret_code():  
-        secret_code = ""
 
-        for i in range(6):
-            secret_code += random.choice(string.digits)
-        return secret_code
+def get_secret_code():
+    secret_code = ""
+
+    for i in range(6):
+        secret_code += random.choice(string.digits)
+    return secret_code
+
 
 def send_email(email, secret):
     print(secret)
@@ -44,12 +47,12 @@ def send_email(email, secret):
     # EmailMessage(
     #     # auth_user='4leaf.ysh@gmail.com',
     #     # auth_password='nvpdqofovkebects',
-    #     subject=subject, 
-    #     message= message, 
-    #     from_email=from_email, 
+    #     subject=subject,
+    #     message= message,
+    #     from_email=from_email,
     #     to=to
     # )
-    
+
     # send_mail('This is the title of the email',
     # 'This is the message you want to send',
     # settings.DEFAULT_FROM_EMAIL,
@@ -64,7 +67,7 @@ def send_email(email, secret):
     #     from_email = 'mail@gmail.com',
     #     recipient_list = ['4leaf.njm@gmail.com'],
     #     fail_silently=False,
-    # )    
+    # )
     # print(res)
     # send_mail('안녕하세요.', '안녕하세요!', '4leaf.njm@gmail.com', ['4leaf.njm@gmail.com'], fail_silently=False)
     # connection = mail.get_connection()   # 기본 이메일 연결 사용
@@ -81,10 +84,6 @@ def send_email(email, secret):
     # connection.close()
 
 
-
-
-    
-
 class UserCreateView(CustomCreateView):
     model = User
     form_class = CustomUserCreationForm
@@ -100,6 +99,7 @@ class UserMypageView(CustomUpdateView):
     success_url = reverse_lazy("core:home")
     template_name = "userapp/mypage.html"
 
+
 class UserFindView(CustomTemplateView):
     template_name = "userapp/find.html"
 
@@ -112,14 +112,18 @@ class UserFindView(CustomTemplateView):
         if find_type == "1":
             users = User.objects.all().filter(name=name, email=email)
 
-            if(len(users) > 0):
-                return render(request, "userapp/find_id_confirm.html", {'id': users[0].username[:-3]})
+            if len(users) > 0:
+                return render(
+                    request,
+                    "userapp/find_id_confirm.html",
+                    {"id": users[0].username[:-3]},
+                )
             else:
-                return render(request, "userapp/find_id_confirm.html", {'id': ""})
+                return render(request, "userapp/find_id_confirm.html", {"id": ""})
 
         elif find_type == "2":
             users = User.objects.all().filter(username=username, email=email)
-            if(len(users) > 0):
+            if len(users) > 0:
                 print(users[0])
                 print(users[0])
                 print(users[0])
@@ -132,16 +136,18 @@ class UserFindView(CustomTemplateView):
             else:
                 return render(request, "userapp/find_pw_none.html")
 
-    
 
 class UserFindIdConfirmView(CustomTemplateView):
     template_name = "userapp/find_id_confirm.html"
 
+
 class UserFindPwNoneView(CustomTemplateView):
     template_name = "userapp/find_pw_none.html"
 
+
 class UserFindPwCertificationView(CustomTemplateView):
     template_name = "userapp/find_pw_certification.html"
+
 
 class UserFindPwChangeView(CustomTemplateView):
     template_name = "userapp/find_pw_change.html"
