@@ -141,3 +141,44 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0 0.1875rem 2rem;
   border-radius: 0.5rem;
 }
+
+@media screen and (max-width: 700px) {
+  .user_create_box {
+    padding: 6.25rem 1rem;
+  }
+
+  .create_user_label_input_wrapper1,
+  .create_user_label_input_wrapper2,
+  .create_user_label_input_wrapper3,
+  .create_user_label_input_wrapper4,
+  .create_user_label_input_wrapper5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+  .create_user_label_input_wrapper1 > label, 
+  .create_user_label_input_wrapper2 > label, 
+  .create_user_label_input_wrapper3 > label, 
+  .create_user_label_input_wrapper4 > label, 
+  .create_user_label_input_wrapper5 > label {
+    margin: 0.5rem 0;
+  }
+
+  .create_user_label_input_wrapper1 input,
+  .create_user_label_input_wrapper2 input, 
+  .create_user_label_input_wrapper3 input, 
+  .create_user_label_input_wrapper4 input, 
+  .create_user_label_input_wrapper5 input {
+    width:25rem;
+}
+
+  .user_create_policy1, 
+  .user_create_policy2 {
+    width: 25rem;
+}
+
+  .user_create_button {
+    width: 25rem;
+  }
+}

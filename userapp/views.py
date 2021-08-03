@@ -8,6 +8,7 @@ from django.urls import reverse, reverse_lazy
 from userapp.decorators import account_ownwership_required
 from django.conf import settings
 from django.core.mail import send_mail, EmailMessage
+from django.core import mail
 import string
 import random
 # settings.configure()
@@ -65,6 +66,20 @@ def send_email(email, secret):
     #     fail_silently=False,
     # )    
     # print(res)
+    # send_mail('안녕하세요.', '안녕하세요!', '4leaf.njm@gmail.com', ['4leaf.njm@gmail.com'], fail_silently=False)
+    # connection = mail.get_connection()   # 기본 이메일 연결 사용
+    # print(connection)
+    # connection.open()
+    # email = mail.EmailMessage(
+    #     'Hello',
+    #     'Body goes here',
+    #     '4leaf.njm@gmail.com',
+    #     ['4leaf.njm@gmail.com'],
+    #     connection=connection,
+    # )
+    # email.send()
+    # connection.close()
+
 
 
 
@@ -84,7 +99,6 @@ class UserMypageView(CustomUpdateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy("core:home")
     template_name = "userapp/mypage.html"
-
 
 class UserFindView(CustomTemplateView):
     template_name = "userapp/find.html"
@@ -106,6 +120,9 @@ class UserFindView(CustomTemplateView):
         elif find_type == "2":
             users = User.objects.all().filter(username=username, email=email)
             if(len(users) > 0):
+                print(users[0])
+                print(users[0])
+                print(users[0])
                 print(users[0])
                 secret = get_secret_code()
                 send_email(email, secret)

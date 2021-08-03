@@ -12,10 +12,10 @@
   </article>
 
   <section class="notice_search mt-5">
-    <form action="{% url 'boardapp:notice_list' %}" , method="GET" class="row justify-content-between">
+    <form action="{% url 'boardapp:notice_list' %}" , method="GET" class="row justify-content-between ml-0">
       <div class="notice_search_inp">
         <input type="text" name="search" placeholder="검색어를 입력해주세요." />
-
+        <span class="material-icons search_icon">search</span>
         
           <!-- <input type="submit" value="검색" /> -->
       </div>
@@ -43,7 +43,7 @@
             </a>
           </td>
           <td>{{notice.author.username}}</td>
-          <td>{{notice.created}}</td>
+          <td>{{notice.created|date:'Y-m-d'}}</td>
           <td>{{notice.hit}}</td>
         </tr>
         {% endfor %}
@@ -52,18 +52,20 @@
   </section>
 
   <section class="mobile_notice_table">
+    {% for notice in notice_list %}
     <table class="mobile_table">
       <thead>
         <tr class="mobile_title">
-          <th>모두박스</th>
+          <th>{{notice.title}}</th>
         </tr>
         <tr class="mobile_list">
-          <th><span class="material-icons">person_outline</span>모두박스</th>
-          <th><span class="material-icons">domain_verification</span>모두박스</th>
-          <th><span class="material-icons">visibility</span>모두박스</th>
+          <th><span class="material-icons">person_outline</span>{{notice.author.username}}</th>
+          <th><span class="material-icons">domain_verification</span>{{notice.created|date:'Y-m-d'}}</th>
+          <th><span class="material-icons">visibility</span>{{notice.hit}}</th>
         </tr>
       </thead>
     </table>
+    {% endfor %}
   </section>
 </div>
 
