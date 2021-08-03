@@ -6,8 +6,8 @@ footer {
   font-size: 0.9rem;
 }
 
-.footer_info {
-  padding-bottom: 4rem;
+.mobile_footer_logo {
+  display: none;
 }
 
 .footer_info h4 {
@@ -57,7 +57,22 @@ footer {
     justify-content: center;
 }
 
+@media screen and (max-width:900px) {
+  .fl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
+.footer_info .footer_info_modubox_txt {
+  margin-top: 2rem;
+}
+
+  .footer_info .footer_info_modubox_logo {
+    width: 12rem;
+  }
+}
 
 
 @media screen and (max-width: 576px) {
@@ -65,12 +80,40 @@ footer {
     padding: 4rem;
   }
 
+  .row .mobile_footer_logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .footer_info {
+    padding-bottom: 2rem;
+  }
+
+  .footer_info:last-child {
+    padding-bottom: 0;
+  }
+
   .footer_info .footer_logo {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .footer_info .footer_info_modubox_logo {
+    display: none;
+  }
+
+  .footer_info .footer_info_modubox_txt {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
   }
 }

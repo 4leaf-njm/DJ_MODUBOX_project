@@ -11,22 +11,36 @@
   </article>
 
   <div class="find_pw_certification">
-    <div class="find_subTitle">이메일 인증</div>
+    <div class="find_subTitle">비밀번호 변경</div>
 
     <form action="" method="POST">
       <input
         type="password"
-        name="secretCode"
+        name="password1"
         autofocus
         autocapitalize="none"
         maxlength="6"
-        class="form-control inp_secretCode"
-        placeholder="인증번호"
+        class="form-control inp_password1"
+        placeholder="비밀번호"
         title=""
         required
-        id="id_secretCode"
+        id="id_password1"
       />
-      <span class="inp_text">입력하신 이메일로 인증번호가 전송되었습니다.<br/>인증번호를 입력해주세요.</span>
+
+      <input
+        type="password"
+        name="password2"
+        autofocus
+        autocapitalize="none"
+        maxlength="6"
+        class="form-control inp_password2"
+        placeholder="비밀번호 확인"
+        title=""
+        required
+        id="id_password2"
+      />
+
+      <span class="inp_text">변경할 비밀번호를 입력해주세요.</span>
     </form>
 
     <div class="find_button_group">

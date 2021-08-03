@@ -9,6 +9,10 @@
   font-weight: 700;
 }
 
+.find .find_desc {
+  font-size: 1.2rem;
+}
+
 .find .find_desc > span {
   color: var(--theme);
 }
@@ -19,13 +23,13 @@
   width: 100%;
 }
 
-.find .find_id, 
+.find .find_id,
 .find .find_pw {
-  margin: 3rem 0 0;
+  margin: 5rem 0 0;
   width: 46%;
-  padding: 2rem;
+  padding: 2rem 4rem;
   border-radius: 2.9375rem;
-  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem; 
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem;
 }
 
 .find .find_id_confirm,
@@ -35,7 +39,7 @@
   width: 70%;
   padding: 2rem;
   border-radius: 2.9375rem;
-  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem; 
+  box-shadow: rgb(0 0 0 / 24%) 0 0.1875rem 2rem;
 }
 
 .find .find_subTitle {
@@ -55,6 +59,7 @@
 .find .find_input_wrapper > label {
   font-size: 1rem;
   text-align: right;
+  margin: 0;
 }
 
 .find .find_input_wrapper > input {
@@ -108,8 +113,11 @@
   align-items: center;
 }
 
-.find .find_pw_certification .inp_secretCode {
+.find .find_pw_certification .inp_secretCode,
+.find .find_pw_certification .inp_password1,
+.find .find_pw_certification .inp_password2 {
   width: 40%;
+  margin: 0.2rem 0;
   outline: none;
 }
 
@@ -117,4 +125,60 @@
   margin: 0.8rem 0 0 0;
   font-size: 1rem;
   color: #4d4a4a;
+}
+
+@media screen and (max-width: 1200px) {
+  .find .find_id,
+  .find .find_pw {
+    padding: 2rem;
+  }
+
+  .find .find_input_wrapper > input {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .find .find_input_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .find .find_input_wrapper > label {
+    margin-bottom: 1rem;
+  }
+
+  .find .find_input_wrapper > input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .find .find_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .find .find_pw {
+    margin-top: 3rem;
+  }
+
+  .find .find_id,
+  .find .find_pw {
+    width: 70%;
+    padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .find .find_id,
+  .find .find_pw {
+    width: 90%;
+    padding: 3rem;
+  }
 }

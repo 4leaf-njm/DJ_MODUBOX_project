@@ -1,6 +1,19 @@
 <footer>
   <div class="container">
     <div class="row">
+      <div class="mobile_footer_logo">
+        {% if logo_list %}
+          {% for logo in logo_list %}
+            <!--  -->
+            {% if logo.title == "Footer LOGO - [MOBILE VERSION]" %}
+            <img class="footer_info_modubox_logo" src="{{logo.logo_file.url}}" alt="{{logo.title}}" />
+            {% endif %}
+            <!--  -->
+          {% endfor %}
+        {% else %}
+          <img class="footer_info_modubox_logo" src="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FLOGO%2FWHITE_COLOR_LOGO.png?alt=media&token=f9f6b949-4435-4304-9c38-49795150493f" alt="logo" />
+        {% endif %}
+      </div>
       <div class="col-xs-12 col-sm-4 footer_info">
         <h4>COMPANY INFO</h4>
 
