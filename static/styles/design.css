@@ -10,7 +10,7 @@
 }
 
 .design_box:hover {
-    box-shadow: 2px 2px 5px #999;
+    box-shadow: 2px 2px 5px rgb(153, 153, 153);
 }
 
 .design_box div {
@@ -25,12 +25,29 @@
   justify-content: center;
 }
 
-
+/* .design_box .design_box_1 {
+  font-size : 1.625rem;
+  display: flex;
+  flex-direction: row;
+} */
 
 .design_box .design_box_1 {
   font-size : 1.625rem;
   display: flex;
   flex-direction: row;
+  animation: titleAnimation 2s forwards;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .design_box .design_box_1 span {
@@ -55,7 +72,6 @@
   background-color: var(--sub-theme2);
   line-height: 2;
 }
-
 
 .design_box_2 .design_box_2_right .design_box_2_right_txt strong {
     color : var(--theme);
