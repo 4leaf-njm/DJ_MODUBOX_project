@@ -29,7 +29,8 @@
 }
 
 .find .find_id_confirm,
-.find .find_pw_certification {
+.find .find_pw_certification,
+.find .find_pw_none {
   margin: 3rem 0 0;
   width: 70%;
   padding: 2rem;
@@ -94,7 +95,7 @@
 
 .find .find_text {
   margin: 0 0 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .find .find_text span {

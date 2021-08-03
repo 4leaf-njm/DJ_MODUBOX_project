@@ -244,6 +244,14 @@
   object-fit: cover;
 }
 
+@media screen and (max-width:1100px) {
+  .home_section1 {
+    align-items: flex-start;
+    padding: 0 0 3rem;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .home_section1 {
     padding: 4rem 2rem;

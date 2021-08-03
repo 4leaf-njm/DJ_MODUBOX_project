@@ -122,9 +122,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # LOGOUT_REDIRECT_URL = reverse_lazy("home")
 
 # EMAIL SETTINGS
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_HOST_USER = '4leaf.ysh@gmail.com'
-EMAIL_HOST_PASSWORD = 'nvpdqofovkebects'
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = '4leaf.ysh@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_HOST_USER = '4leaf.ysh@gmail.com'
+# EMAIL_HOST_PASSWORD = 'nvpdqofovkebects'
+EMAIL_HOST_USER = '4leaf.njm@gmail.com'
+EMAIL_HOST_PASSWORD = 'mhbtisbondcvfooc'
+EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
