@@ -100,7 +100,6 @@ class UserMypageView(CustomUpdateView):
     success_url = reverse_lazy("core:home")
     template_name = "userapp/mypage.html"
 
-
 class UserFindView(CustomTemplateView):
     template_name = "userapp/find.html"
 

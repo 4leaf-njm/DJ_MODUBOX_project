@@ -17,6 +17,8 @@
     <form action="{% url 'userapp:mypage' pk=user.pk %}" method="POST">
       {% csrf_token %}
 
+      <input type="hidden" name="id" value="{{ user.id }}" />
+
       <!--  -->
       <!--  -->
       <!--  -->
