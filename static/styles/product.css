@@ -1,3 +1,15 @@
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .pp .pp_title {
     font-size: 1.25rem;
     line-height: 2.6;
@@ -7,6 +19,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: titleAnimation 2s forwards;
 }
 
 .pp .pp_title article strong {
