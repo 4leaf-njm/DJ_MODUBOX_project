@@ -61,7 +61,22 @@ footer {
     justify-content: center;
 }
 
+@media screen and (max-width:900px) {
+  .fl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
 
+.footer_info .footer_info_modubox_txt {
+  margin-top: 2rem;
+}
+
+  .footer_info .footer_info_modubox_logo {
+    width: 12rem;
+  }
+}
 
 
 @media screen and (max-width: 576px) {
@@ -90,7 +105,7 @@ footer {
     justify-content: center;
   }
 
-  .fl .footer_info_modubox_logo {
+  .footer_info .footer_info_modubox_logo {
     display: none;
   }
 
