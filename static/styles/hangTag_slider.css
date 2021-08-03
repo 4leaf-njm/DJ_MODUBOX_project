@@ -1,0 +1,14 @@
+.slick.box{
+    width: 30rem;
+    height: 5rem;
+}
+.slick-slide{
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+    .slick.box{
+        width: 23rem;
+        height: 5rem;
+    }
+ }
