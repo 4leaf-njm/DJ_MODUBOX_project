@@ -3,7 +3,7 @@
 
   border-radius: 1.5rem;
   border: 0.5rem solid var(--theme);
-  padding : 1rem;
+  padding : 3.125rem 4rem;
   margin-bottom : 8rem;
 
   transition: 0.3s;
@@ -28,11 +28,9 @@
 
 
 .design_box .design_box_1 {
-  height: 5rem;
   font-size : 1.625rem;
   display: flex;
   flex-direction: row;
-  
 }
 
 .design_box .design_box_1 span {
@@ -41,6 +39,7 @@
 }
 
 .design_box .design_box_2 {
+  height: 24.7rem;
   padding-bottom : 1rem;
   margin-bottom: 3rem;
   display: flex;
@@ -50,6 +49,13 @@
   justify-content: center;
 }
 
+.design_box_2 .design_box_2_right {
+  width: 50%;
+  height: 100%;
+  background-color: var(--sub-theme2);
+  line-height: 2;
+}
+
 
 .design_box_2 .design_box_2_right .design_box_2_right_txt strong {
     color : var(--theme);
@@ -57,6 +63,7 @@
 
 .design_box .design_box_2 div {
     width: 50%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -66,6 +73,7 @@
 
 .design_box .design_box_2 div img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: 0.4s;
 }
@@ -80,13 +88,17 @@
 
 
 .design_box .design_box_3 div {
-  width: 24.0625rem;
-
+  width: calc(100% / 3 - (2.4rem / 3));
+  margin-right: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: hidden;
   background-color: grey;
+}
+
+.design_box .design_box_3 div:last-child {
+  margin-right: 0;
 }
 
 .design_box .design_box_3 div img {
@@ -105,7 +117,7 @@
 
 .design_box .design_box_4 {
     height: 5rem;
-    margin-top : 3.5rem;
+    margin-top : 3.125rem;
 }
 
 .design_box .design_box_4 article {
@@ -128,7 +140,7 @@
 
 @media screen and (max-width: 1200px ) {
   .design_box_2 .design_box_2_right {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .design_box .design_box_3 {
@@ -146,21 +158,32 @@
 
 @media screen and (max-width: 1100px ) {
   .design_box .design_box_2 {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
     flex-direction: column;
-    padding-bottom: 0;
-    margin-bottom: 0;
   }
 
   .design_box .design_box_2 div {
     width: 100%;
-    height: auto;
-    margin-bottom: 3rem;
+  }
+
+  .design_box_2 .design_box_2_right {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .design_box_2 .design_box_2_right .design_box_2_right_txt {
+    font-size: 0.9rem;
   }
 
   .design_box .design_box_3 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-start;
     height: auto;
-    
   }
 
   .design_box .design_box_3 div {
@@ -182,6 +205,14 @@
 }
 
 @media screen and (max-width: 900px) {
+  .design_box .design_box_1 {
+    font-size: 1.5rem;
+  }
+
+  .design_box .design_box_1 span {
+    display: contents;
+  }
+
   .design_box .design_box_4 {
     margin-top: 3rem;
 }
@@ -195,6 +226,10 @@
     .design_outBox {
       padding: 0 1rem;
     }
+
+    .design_box {
+      padding: 3rem 1rem;
+    }
   
     .design_box_2 .design_box_2_right {
     font-size: 0.9rem;
@@ -204,22 +239,25 @@
       font-size : 0.8rem !important;
       padding : 1rem;
     }
-    
-    .design_box .design_box_1 {
-        font-size : 1rem !important;
-    }
 
+    .design_box_2 .design_box_2_right .design_box_2_right_txt {
+      display: contents;
+    }
+ 
     .design_box .design_box_2 div {
         width: 100%;
         font-size : 0.7rem;
     }
 
-    .design_box_4 article {
-        font-size : 0.8rem !important;
+    .design_box .design_box_3 {
+      width: 100%;
+      flex-wrap: wrap;
     }
-  
+
     .design_box .design_box_3 div {
-        width : 12rem;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
     }
   
   }
