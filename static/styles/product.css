@@ -198,12 +198,18 @@
   }
 
 .product_list3_box {
-    width: 50%; 
+    width: 100%; 
+    overflow: hidden;
   }
 
 
 .product_list3_box img{
     width: 32rem;
+}
+
+.product_list3_box img:hover{
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .product_list3_box2{
