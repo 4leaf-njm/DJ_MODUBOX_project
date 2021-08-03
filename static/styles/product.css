@@ -236,6 +236,7 @@
 .product_list3_title .product_list3_box2_title{
     color: var(--theme);
     font-size: 1.75rem;
+    margin-top: 1rem;
 }
 
 /* .product_list3_box2_content{
