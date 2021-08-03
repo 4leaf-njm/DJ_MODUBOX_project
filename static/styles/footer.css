@@ -65,6 +65,10 @@ footer {
     padding: 4rem;
   }
 
+  .footer_info {
+    padding-bottom: 0;
+  }
+
   .footer_info .footer_logo {
     width: 100%;
     margin-top: 4rem;
