@@ -146,6 +146,10 @@
 }
 
 @media screen and (max-width:700px) {
+  .notice_outBox {
+    padding: 0 1rem !important;
+  }
+
   .login_box {
     display: flex;
     flex-direction: column;
