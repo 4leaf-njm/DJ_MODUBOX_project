@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% load bootstrap4 %}
+{% extends 'base.html' %} {% load bootstrap4 %} {% load static %}
 <!--  -->
 
 {% block content %}
@@ -273,39 +273,42 @@
     <div class="form-group">
       <label for="id_file_1">첨부파일1</label>
       <br />
-      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input type="text" class="inputFile" id="id_file_target_1" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(1)" />
       <input
         type="file"
         name="file_1"
         class="form-control-file"
         title=""
         id="id_file_1"
+        onchange="changeFileHandler(this, 1)"
       />
     </div>
 
     <div class="form-group">
       <label for="id_file_2">첨부파일2</label>
       <br />
-      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input type="text" class="inputFile" id="id_file_target_2" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(2)" />
       <input
         type="file"
         name="file_2"
         class="form-control-file"
         title=""
         id="id_file_2"
+        onchange="changeFileHandler(this, 2)"
       />
     </div>
 
     <div class="form-group">
       <label for="id_file_3">첨부파일3</label>
       <br />
-      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input type="text" class="inputFile" id="id_file_target_3" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(3)" />
       <input
         type="file"
         name="file_3"
         class="form-control-file"
         title=""
         id="id_file_3"
+        onchange="changeFileHandler(this, 3)"
       />
     </div>
 
@@ -317,4 +320,7 @@
   </form>
 </div>
 
+<script src="{% static 'js/orderCreate.js' %}"></script>
+
 {% endblock content %}
+

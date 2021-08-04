@@ -91,7 +91,8 @@
 .inputFile {
   height: 2.25rem;
   padding: 0.3rem 0.6rem;
- 
+  cursor: default;
+  outline: none;
 }
 
 .form-control-file {
