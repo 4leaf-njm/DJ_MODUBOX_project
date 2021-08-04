@@ -34,6 +34,7 @@
 
 .section1_imgBox {
   width: 41.25rem;
+  box-shadow: 3px 3px 3px var(--light-gray2);
 }
 
 .section1_txtBox1 {
