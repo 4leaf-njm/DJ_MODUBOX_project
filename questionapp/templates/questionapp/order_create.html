@@ -20,7 +20,7 @@
     </div>
   </div>
   <div class="order_subTitle">고객정보</div>
-  <form action="{% url 'questionapp:order' %}" method="POST">
+  <form action="{% url 'questionapp:order' %}" method="POST" id="order-form-js">
     {% csrf_token %}
     <!--  -->
 
@@ -314,8 +314,8 @@
 
     <div class="order_lineBottom"></div>
 
-    <div class="order_botton">
-      <a href="#">견적의뢰서 작성완료</a>
+    <div class="order_button">
+      <a href="javascript:createOrderHandler()">견적의뢰서 작성완료</a>
     </div>
   </form>
 </div>

@@ -140,7 +140,7 @@
 
 /* BOTTON */
 
-.order_botton {
+.order_button {
   width: 100%;
 
   display: flex;
@@ -148,7 +148,7 @@
   justify-content: center;
 }
 
-.order_botton a {
+.order_button a {
   width: 20rem;
   padding: 1rem 0;
   margin-top: 5rem;
@@ -166,11 +166,11 @@
   overflow: hidden;
 }
 
-.order_botton a:hover {
+.order_button a:hover {
   color: var(--white);
 }
 
-.order_botton a:before {
+.order_button a:before {
   content: "";
   position: absolute;
   top: 0;
@@ -181,13 +181,13 @@
   z-index: -1;
 }
 
-.order_botton a:hover:before {
+.order_button a:hover:before {
   width: 100%;
   transition: all 1s;
 }
 
 @media screen and (max-width: 900px) {
-  .order_botton a {
+  .order_button a {
     margin-top: 4rem;
   }
 }
@@ -226,7 +226,7 @@
     margin-right: 0.5rem;
   }
 
-  .order_botton a {
+  .order_button a {
     margin-top: 3rem;
   }
 }

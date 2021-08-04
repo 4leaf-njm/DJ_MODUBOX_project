@@ -11,3 +11,8 @@ const changeFileHandler = (obj, idx) => {
 
   target.value = value.substring(value.lastIndexOf("\\") + 1);
 };
+
+const createOrderHandler = () => {
+  const form = document.getElementById("order-form-js");
+  form.submit();
+};

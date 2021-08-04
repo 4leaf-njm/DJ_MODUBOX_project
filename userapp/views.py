@@ -87,7 +87,7 @@ def send_email(email, secret):
 class UserCreateView(CustomCreateView):
     model = User
     form_class = CustomUserCreationForm
-    success_url = reverse_lazy("core:home")
+    success_url = reverse_lazy("userapp:login")
     template_name = "userapp/user_create.html"
 
 
