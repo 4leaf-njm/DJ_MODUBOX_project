@@ -3,7 +3,11 @@
 
 {% block content %}
 <!--  -->
-{% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b" menu="고객지원" title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F11-Call-center.png?alt=media&token=6f7c9b0e-7c5f-4052-bc0f-e52c332887db" content="고객지원" %}
+{% include 'snippets/sub_banner.html' with
+img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b"
+menu="고객지원"
+title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F11-Call-center.png?alt=media&token=6f7c9b0e-7c5f-4052-bc0f-e52c332887db"
+content="고객지원" %}
 
 <div class="container orderCreate">
   <div class="order mt-5">
@@ -24,7 +28,9 @@
     {% csrf_token %}
     <!--  -->
 
-    <div class="form-group">
+    {% bootstrap_form form %}
+
+    <!-- <div class="form-group">
       <label for="id_title"
         >제작의뢰명 {% include 'snippets/required_icons.html' %}</label
       >
@@ -162,7 +168,7 @@
       />
     </div>
 
-    <!-- SIZE -->
+
     <div class="form-group">
       <label for="id_size_width"
         >가로(mm){% include 'snippets/required_icons.html' %}</label
@@ -273,7 +279,14 @@
     <div class="form-group">
       <label for="id_file_1">첨부파일1</label>
       <br />
-      <input type="text" class="inputFile" id="id_file_target_1" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(1)" />
+      <input
+        type="text"
+        class="inputFile"
+        id="id_file_target_1"
+        placeholder="첨부파일을 선택해주세요."
+        readonly
+        onclick="clickFileHandler(1)"
+      />
       <input
         type="file"
         name="file_1"
@@ -287,7 +300,14 @@
     <div class="form-group">
       <label for="id_file_2">첨부파일2</label>
       <br />
-      <input type="text" class="inputFile" id="id_file_target_2" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(2)" />
+      <input
+        type="text"
+        class="inputFile"
+        id="id_file_target_2"
+        placeholder="첨부파일을 선택해주세요."
+        readonly
+        onclick="clickFileHandler(2)"
+      />
       <input
         type="file"
         name="file_2"
@@ -301,7 +321,14 @@
     <div class="form-group">
       <label for="id_file_3">첨부파일3</label>
       <br />
-      <input type="text" class="inputFile" id="id_file_target_3" placeholder="첨부파일을 선택해주세요." readonly onclick="clickFileHandler(3)" />
+      <input
+        type="text"
+        class="inputFile"
+        id="id_file_target_3"
+        placeholder="첨부파일을 선택해주세요."
+        readonly
+        onclick="clickFileHandler(3)"
+      />
       <input
         type="file"
         name="file_3"
@@ -310,12 +337,13 @@
         id="id_file_3"
         onchange="changeFileHandler(this, 3)"
       />
-    </div>
+    </div> -->
 
     <div class="order_lineBottom"></div>
 
     <div class="order_button">
-      <a href="javascript:createOrderHandler()">견적의뢰서 작성완료</a>
+      <!-- <a href="javascript:createOrderHandler()">견적의뢰서 작성완료</a> -->
+      <button>OK</button>
     </div>
   </form>
 </div>
@@ -323,4 +351,3 @@
 <script src="{% static 'js/orderCreate.js' %}"></script>
 
 {% endblock content %}
-
