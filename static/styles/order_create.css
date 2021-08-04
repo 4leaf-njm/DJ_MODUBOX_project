@@ -22,6 +22,7 @@
 /*  */
 
 .order_subTitle {
+  width: 100%;
   font-size: 1.4rem;
   margin-top: 6.3rem;
   border-bottom: 0.3rem solid var(--theme);
@@ -64,10 +65,11 @@
 
   align-items: flex-start !important;
   flex-direction: column !important;
+  justify-content: center !important;
 }
 
 .order_textarea_box .form-control {
-  width: 100% !important;
+  /* width: 100% !important; */
   margin-top: 2rem;
   border: none;
   border-radius: 0.5rem;
