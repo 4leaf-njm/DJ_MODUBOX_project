@@ -31,6 +31,9 @@ const createOrderHandler = () => {
   const size_height = document.getElementById("id_size_height");
   const content = document.getElementById("id_content");
 
+  const reg_email =
+    /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+
   if (!title.value) {
     alert("제작의뢰명을 입력해주세요.");
     title.focus();
@@ -63,6 +66,12 @@ const createOrderHandler = () => {
 
   if (!email.value) {
     alert("이메일을 입력해주세요.");
+    email.focus();
+    return;
+  }
+
+  if (!reg_email.test(email.value)) {
+    alert("이메일 형식으로 입력해주세요.");
     email.focus();
     return;
   }

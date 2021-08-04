@@ -25,6 +25,11 @@
  top:5px;
  right: 5px;
  color: rgb(169, 169, 169);
+ cursor: pointer;
+}
+
+.notice .notice_search_inp .search_icon:hover {
+  color: var(--theme);
 }
 
 .notice .notice_search_inp > input {
@@ -117,6 +122,11 @@
 @media screen and (max-width:800px){
   .notice .notice_search {
     padding: 0 1rem;
+  }
+
+  .notice .notice_search_inp {
+    width: 15rem;
+    height: 2.5rem;
   }
 
   .notice .notice_search_inp .search_icon {

@@ -3,11 +3,7 @@
 
 {% block content %}
 <!--  -->
-{% include 'snippets/sub_banner.html' with
-img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b"
-menu="고객지원"
-title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F11-Call-center.png?alt=media&token=6f7c9b0e-7c5f-4052-bc0f-e52c332887db"
-content="고객지원" %}
+{% include 'snippets/sub_banner.html' with img_source="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FSUBBANNER%2FSUB_BANNER_%E1%84%80%E1%85%A9%E1%84%80%E1%85%A2%E1%86%A8%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%AF%E1%86%AB.png?alt=media&token=1a58f20a-b898-455f-909e-d8c1ae744f2b" menu="고객지원" title="https://firebasestorage.googleapis.com/v0/b/storage-4leaf.appspot.com/o/MODUBOX%2FICON%2F11-Call-center.png?alt=media&token=6f7c9b0e-7c5f-4052-bc0f-e52c332887db" content="고객지원" %}
 
 <div class="container orderCreate">
   <div class="order mt-5">
@@ -28,9 +24,9 @@ content="고객지원" %}
     {% csrf_token %}
     <!--  -->
 
-    {% bootstrap_form form %}
+    <!-- {% bootstrap_form form %} -->
 
-    <!-- <div class="form-group">
+    <div class="form-group">
       <label for="id_title"
         >제작의뢰명 {% include 'snippets/required_icons.html' %}</label
       >
@@ -132,6 +128,7 @@ content="고객지원" %}
     <div class="order_subTitle">제작사양</div>
 
     <div class="form-group pro_type_box">
+      <!-- <input type="hidden" name="pro_type" value="패키지" /> -->
       <label for="id_pro_type"
         >제작물{% include 'snippets/required_icons.html' %}</label
       >
@@ -259,6 +256,38 @@ content="고객지원" %}
       </select>
     </div>
 
+    <div class="form-group">
+      <label for="id_coating"
+        >코팅{% include 'snippets/required_icons.html' %}</label
+      >
+      <select
+        name="coating"
+        class="form-control"
+        title=""
+        id="id_coating"
+      >
+        <option value="없음" selected>없음</option>
+        <option value="무광라미네이팅">무광라미네이팅</option>
+        <option value="유광라미네이팅">유광라미네이팅</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="id_processing"
+        >후가공{% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="text"
+        name="processing"
+        class="form-control"
+        placeholder="후가공"
+        title=""
+        required
+        id="id_processing"
+      />
+    </div>
+
+
     <div class="form-group order_textarea_box">
       <label for="id_content"
         >문의내용{% include 'snippets/required_icons.html' %}</label
@@ -337,13 +366,12 @@ content="고객지원" %}
         id="id_file_3"
         onchange="changeFileHandler(this, 3)"
       />
-    </div> -->
+    </div> 
 
     <div class="order_lineBottom"></div>
 
     <div class="order_button">
-      <!-- <a href="javascript:createOrderHandler()">견적의뢰서 작성완료</a> -->
-      <button>OK</button>
+      <a href="javascript:createOrderHandler()">견적의뢰서 작성완료</a>
     </div>
   </form>
 </div>
