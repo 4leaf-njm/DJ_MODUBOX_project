@@ -16,9 +16,9 @@ class Product(TimeStamped):
 
     title = models.CharField("상품 타이틀", max_length=200, null=False)
     type = models.CharField("상품 유형", choices=PRODUT_TYPE, max_length=100, null=False)
-    content = models.TextField("상품 내용", help_text="화면에 줄바꿈이 필요한 경우 Enter대신 br 테그를 입력해주세요.")
+    content = models.TextField("상품 내용", help_text="화면에 줄바꿈이 필요한 경우 Enter대신 br 태그를 입력해주세요.")
     spec = models.TextField(
-        "제작 사양", null=True, blank=True, help_text="행택의 유형을 선택한 경우에만 적용됩니다."
+        "제작 사양", null=True, blank=True, help_text="행택의 유형을 선택한 경우에만 적용됩니다. 화면에 줄바꿈이 필요한 경우 Enter대신 br 태그를 입력해주세요."
     )
     sort = models.IntegerField("정렬 순서", help_text="정렬 순서는 3자리 까지 입력 가능합니다.")
 
