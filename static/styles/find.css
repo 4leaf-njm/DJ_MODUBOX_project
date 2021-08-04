@@ -200,4 +200,8 @@
     width: 90%;
     padding: 3rem;
   }
+
+  .find .find_text {
+    font-size: 1rem;
+  }
 }
