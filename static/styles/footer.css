@@ -28,6 +28,10 @@ footer {
   margin: 0.4rem 0;
 }
 
+.footer_info .footer_info_text:last-child {
+  margin: 0;
+}
+
 .footer_info .footer_info_logo {
     width : 13rem;
     margin-bottom: 1rem;
@@ -38,8 +42,12 @@ footer {
     margin-bottom: 0.6rem;
 }
 
+.footer_info .footer_info_account_txt:last-child {
+  margin-bottom: 0;
+}
+
 .footer_info .footer_info_modubox_logo {
-    width : 21.25rem;
+    width : 20.25rem;
     text-align: center;
 }
 
