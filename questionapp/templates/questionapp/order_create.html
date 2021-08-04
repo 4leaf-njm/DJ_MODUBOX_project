@@ -15,10 +15,9 @@
     </div>
 
     <div class="order_mobileDesc">
-      <article><span>모두박스</span>의 궁금한 모든 것을 신속하고 </article>
+      <article><span>모두박스</span>의 궁금한 모든 것을 신속하고</article>
       <article>정확한 상담을 통해 확인해보세요.</article>
     </div>
-
   </div>
   <div class="order_subTitle">고객정보</div>
   <form action="{% url 'questionapp:order' %}" method="POST">
@@ -26,7 +25,9 @@
     <!--  -->
 
     <div class="form-group">
-      <label for="id_title">제작의뢰명 {% include 'snippets/required_icons.html' %}</label>
+      <label for="id_title"
+        >제작의뢰명 {% include 'snippets/required_icons.html' %}</label
+      >
       <input
         type="text"
         name="title"
@@ -39,38 +40,42 @@
       />
     </div>
 
-   
-      <div class="form-group">
-        <label for="id_company">상 호{% include 'snippets/required_icons.html' %}</label>
-        <input
-          type="text"
-          name="company"
-          maxlength="100"
-          class="form-control"
-          placeholder="상 호"
-          title=""
-          required
-          id="id_company"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="id_name">성 명{% include 'snippets/required_icons.html' %}</label>
-        <input
-          type="text"
-          name="name"
-          maxlength="20"
-          class="form-control"
-          placeholder="성 명"
-          title=""
-          required
-          id="id_name"
-        />
-      </div>
-  
+    <div class="form-group">
+      <label for="id_company"
+        >상 호{% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="text"
+        name="company"
+        maxlength="100"
+        class="form-control"
+        placeholder="상 호"
+        title=""
+        required
+        id="id_company"
+      />
+    </div>
 
     <div class="form-group">
-      <label for="id_password">비밀번호{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_name"
+        >성 명{% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="text"
+        name="name"
+        maxlength="20"
+        class="form-control"
+        placeholder="성 명"
+        title=""
+        required
+        id="id_name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="id_password"
+        >비밀번호{% include 'snippets/required_icons.html' %}</label
+      >
       <input
         type="password"
         name="password"
@@ -86,44 +91,44 @@
       >
     </div>
 
+    <div class="form-group">
+      <label for="id_tel"
+        >연락처{% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="text"
+        name="tel"
+        maxlength="20"
+        class="form-control"
+        placeholder="연락처"
+        title=""
+        required
+        id="id_tel"
+      />
+    </div>
 
-    
-      <div class="form-group">
-        <label for="id_tel">연락처{% include 'snippets/required_icons.html' %}</label>
-        <input
-          type="text"
-          name="tel"
-          maxlength="20"
-          class="form-control"
-          placeholder="연락처"
-          title=""
-          required
-          id="id_tel"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="id_email">이메일{% include 'snippets/required_icons.html' %}</label>
-        <input
-          type="email"
-          name="email"
-          maxlength="254"
-          class="form-control"
-          placeholder="이메일"
-          title=""
-          required
-          id="id_email"
-        />
-      </div>
-   
-
-
-
+    <div class="form-group">
+      <label for="id_email"
+        >이메일{% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="email"
+        name="email"
+        maxlength="254"
+        class="form-control"
+        placeholder="이메일"
+        title=""
+        required
+        id="id_email"
+      />
+    </div>
 
     <div class="order_subTitle">제작사양</div>
 
     <div class="form-group pro_type_box">
-      <label for="id_pro_type">제작물{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_pro_type"
+        >제작물{% include 'snippets/required_icons.html' %}</label
+      >
       <div>
         <label for="pro_type1">패키지</label>
         <input type="radio" name="pro_type" id="pro_type1" value="패키지" />
@@ -143,7 +148,9 @@
     </div>
 
     <div class="form-group">
-      <label for="id_pro_qny">제작수량{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_pro_qny"
+        >제작수량{% include 'snippets/required_icons.html' %}</label
+      >
       <input
         type="number"
         name="pro_qny"
@@ -155,34 +162,65 @@
       />
     </div>
 
-
     <!-- SIZE -->
     <div class="form-group">
-      <label for="id_size_width">가로(mm){% include 'snippets/required_icons.html' %}</label>
-      <input type="number" name="size_width" class="form-control" placeholder="사이즈 가로(mm)" title="" required id="id_size_width">
+      <label for="id_size_width"
+        >가로(mm){% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="number"
+        name="size_width"
+        class="form-control"
+        placeholder="사이즈 가로(mm)"
+        title=""
+        required
+        id="id_size_width"
+      />
     </div>
 
     <div class="form-group">
-      <label for="id_size_length">세로(mm){% include 'snippets/required_icons.html' %}</label>
-      <input type="number" name="size_length" class="form-control" placeholder="사이즈 세로(mm)" title="" required id="id_size_length">
+      <label for="id_size_length"
+        >세로(mm){% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="number"
+        name="size_length"
+        class="form-control"
+        placeholder="사이즈 세로(mm)"
+        title=""
+        required
+        id="id_size_length"
+      />
     </div>
 
     <div class="form-group">
-      <label for="id_size_height">높이(mm){% include 'snippets/required_icons.html' %}</label>
-      <input type="number" name="size_height" class="form-control" placeholder="사이즈 높이(mm)" title="" required id="id_size_height">
+      <label for="id_size_height"
+        >높이(mm){% include 'snippets/required_icons.html' %}</label
+      >
+      <input
+        type="number"
+        name="size_height"
+        class="form-control"
+        placeholder="사이즈 높이(mm)"
+        title=""
+        required
+        id="id_size_height"
+      />
     </div>
 
-
-   
     <div class="form-group">
-      <label for="id_design_yn">디자인 유/무{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_design_yn"
+        >디자인 유/무{% include 'snippets/required_icons.html' %}</label
+      >
       <select name="design_yn" class="form-control" title="" id="id_design_yn">
         <option value="없음" selected>없음</option>
         <option value="의뢰">의뢰</option>
       </select>
     </div>
     <div class="form-group">
-      <label for="id_paper_type">종이재질{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_paper_type"
+        >종이재질{% include 'snippets/required_icons.html' %}</label
+      >
       <select
         name="paper_type"
         class="form-control"
@@ -197,7 +235,9 @@
       </select>
     </div>
     <div class="form-group">
-      <label for="id_print_spec">인쇄사양{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_print_spec"
+        >인쇄사양{% include 'snippets/required_icons.html' %}</label
+      >
       <select
         name="print_spec"
         class="form-control"
@@ -212,10 +252,11 @@
         <option value="기타인쇄">기타인쇄</option>
       </select>
     </div>
-    
 
     <div class="form-group order_textarea_box">
-      <label for="id_content">문의내용{% include 'snippets/required_icons.html' %}</label>
+      <label for="id_content"
+        >문의내용{% include 'snippets/required_icons.html' %}</label
+      >
       <textarea
         name="content"
         cols="40"
@@ -231,29 +272,49 @@
 
     <div class="form-group">
       <label for="id_file_1">첨부파일1</label>
-      <br>
-      <input type="file" name="file_1" class="form-control-file" title="" id="id_file_1">
+      <br />
+      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input
+        type="file"
+        name="file_1"
+        class="form-control-file"
+        title=""
+        id="id_file_1"
+      />
     </div>
 
     <div class="form-group">
       <label for="id_file_2">첨부파일2</label>
-      <br>
-      <input type="file" name="file_2" class="form-control-file" title="" id="id_file_2">
+      <br />
+      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input
+        type="file"
+        name="file_2"
+        class="form-control-file"
+        title=""
+        id="id_file_2"
+      />
     </div>
 
     <div class="form-group">
       <label for="id_file_3">첨부파일3</label>
-      <br>
-      <input type="file" name="file_3" class="form-control-file" title="" id="id_file_3">
+      <br />
+      <input type="text" class="inputFile" placeholder="첨부파일 선택해주세요."/>
+      <input
+        type="file"
+        name="file_3"
+        class="form-control-file"
+        title=""
+        id="id_file_3"
+      />
     </div>
 
     <div class="order_lineBottom"></div>
-    
-      <div class="order_botton">
-        <a href="#">견적의뢰서 작성완료</a>
-      </div>
+
+    <div class="order_botton">
+      <a href="#">견적의뢰서 작성완료</a>
+    </div>
   </form>
 </div>
-
 
 {% endblock content %}
