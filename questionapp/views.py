@@ -5,12 +5,12 @@ from questionapp.forms import OrderCreationForm
 from django.urls import reverse
 
 
-class OrderCreateView(CustomCreateView) :
+class OrderCreateView(CustomCreateView):
     model = OrderBoard
     form_class = OrderCreationForm
     template_name = "questionapp/order_create.html"
-    
-    def get_success_url(self)  :
+
+    def get_success_url(self):
         return reverse("core:home")
 
 
