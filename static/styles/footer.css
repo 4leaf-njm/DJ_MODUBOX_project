@@ -28,6 +28,15 @@ footer {
   margin: 0.4rem 0;
 }
 
+.footer_info .footer_info_text a {
+  color: var(--white);
+}
+
+.footer_info .footer_info_text a:hover {
+  color: var(--theme);
+}
+
+
 .footer_info .footer_info_text:last-child {
   margin: 0;
 }
