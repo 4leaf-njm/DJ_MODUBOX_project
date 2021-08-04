@@ -51,4 +51,8 @@
     .carousel-item img {
         height: 30rem;
     }
+
+    .carousel-indicators {
+        bottom: 0;
+    }
 }
