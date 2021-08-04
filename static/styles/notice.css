@@ -124,6 +124,11 @@
     padding: 0 1rem;
   }
 
+  .notice .notice_search_inp {
+    width: 15rem;
+    height: 2.5rem;
+  }
+
   .notice .notice_search_inp .search_icon {
     font-size: 1.6rem;
     position: absolute;
